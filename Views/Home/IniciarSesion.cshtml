@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "IniciarSesion";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>IniciarSesion</title>
+</head>
+<body>
+    
+
+    @using (Html.BeginForm("IniciarSesion", "Home", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <h1>Iniciar sesion</h1>
+        <div class="inputbox">
+            <ion-icon name="mail-outlane"></ion-icon>
+            <input type="email" id="correo" name="correo" required>
+            <label for="correo">Correo</label>
+        </div>
+        <div class="inputbox">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password" id="contrasena" name="contrasena" required>
+            <label for="contrasena">Contraseña</label>
+        </div>
+            <button>Iniciar</button>
+
+            }  @if (ViewData["Mensaje"] != null)
+            {
+                <p>@ViewData["Mensaje"]</p>
+            }
+
+    </body>
+</html>
