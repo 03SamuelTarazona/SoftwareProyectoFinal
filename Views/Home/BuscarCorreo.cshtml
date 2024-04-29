@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "BuscarCorreo";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BuscarCorreo</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("BuscarCorreo", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <h1>Buscar Correo</h1>
+            <div class="form-row">
+                <div>
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="contenedor">
+                    <button>Enviar Correo</button>
+                </div>
+            </div>
+            <div>
+            </div>
+        }  @if (ViewData["Mensaje"] != null)
+        {
+            <p>@ViewData["Mensaje"]</p>
+        }
+    </div>
+</body>
+</html>

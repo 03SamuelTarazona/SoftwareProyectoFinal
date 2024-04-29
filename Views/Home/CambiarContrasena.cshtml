@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "CambiarContrasena";
+}
+@{ 
+    var correo = ViewData["correo"];
+} 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gola</title>
+</head>
+<body>
+    
+        @using (Html.BeginForm("CambiarContrasena", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+          <input type="hidden" name="correo" value=@correo>
+
+            <div>
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" name="codigo" required />
+            </div>
+
+            <div>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required />
+            </div>
+
+            <div>
+                <button type="submit">Cambiar Contraseña</button>
+            </div>
+
+        
+    }  @if (ViewData["Mensaje"] != null)
+        {
+            <p>@ViewData["Mensaje"]</p>
+        }
+</body>
+</html>

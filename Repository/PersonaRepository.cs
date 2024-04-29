@@ -103,5 +103,89 @@ public class PersonaRepository
 
         return persona;
     }
+    public int ActualizarContrasena(string correo, string contrasena)
+    {
+        int comando = 0;
+        ConexionBDUtility conexion = new ConexionBDUtility();
+        try
+        {
+
+            conexion.Connect();
+            string SQL = "UPDATE dbo.Persona SET  contrasena=@contrasena " + "WHERE correo = @correo";
+            using (SqlCommand command = new SqlCommand(SQL, conexion.Conexion()))
+            {
+                command.Parameters.AddWithValue("@correo", correo);
+                command.Parameters.AddWithValue("@contrasena", contrasena);
+
+                command.ExecuteNonQuery();
+            }
+            comando = 1;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+        }
+        finally
+        {
+            conexion.Disconnect();
+        }
+        return comando;
+    }
+    public PersonaDto SeleccionarPersona(string correo)
+    {
+        ConexionBDUtility conexion = new ConexionBDUtility();
+        PersonaDto persona = null;
+        PersonaDto personaResp = new PersonaDto();
+        Encrypt encr = new Encrypt();
+
+        try
+        {
+            conexion.Connect();
+            string SQL = "SELECT id_persona,correo FROM dbo.Persona WHERE (correo = @correo)";
+            using (SqlCommand command = new SqlCommand(SQL, conexion.Conexion()))
+            {
+                command.Parameters.AddWithValue("@correo", correo);
+
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+
+                        persona = new PersonaDto
+                        {
+                            id_persona = Convert.ToInt32(reader["id_persona"]),
+                            correo = reader["correo"].ToString()
+                        };
+                        conexion.Disconnect();
+                        persona.respuesta = 1;
+                        persona.mensaje = "Inicio correcto";
+                        return persona;
+
+                    }
+                    else
+                    {
+                        personaResp.respuesta = 0;
+                        personaResp.mensaje = "Inicio Incorrecto";
+                        return personaResp;
+                    }
+                }
+            }
+
+        }
+        catch (Exception ex)
+        {
+            persona = new PersonaDto
+            {
+                respuesta = -1,
+                mensaje = "Error al inicio sesión: " + ex.Message
+            };
+        }
+        finally
+        {
+            conexion.Disconnect();
+        }
+        return persona;
+    }
 
 }

@@ -1,38 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\",
+  "WorkspaceRootPath": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\source\\repos\\software_proyecto\\services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\onedrive\\documentos\\visual studio y vsc\\visual studio\\software_proyecto\\proyectofinaldesoftware\\utilitys\\db\\eliminarcodigo_sp.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:utilitys\\db\\eliminarcodigo_sp.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\source\\repos\\software_proyecto\\utilitys\\encrypt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:utilitys\\encrypt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\repository\\codigorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:repository\\codigorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\source\\repos\\software_proyecto\\utilitys\\conexionbdutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\onedrive\\documentos\\visual studio y vsc\\visual studio\\software_proyecto\\proyectofinaldesoftware\\utilitys\\conexionbdutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:utilitys\\conexionbdutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\source\\repos\\software_proyecto\\repository\\personarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:repository\\personarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\views\\home\\buscarcorreo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\buscarcorreo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\source\\repos\\software_proyecto\\services\\personaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:services\\personaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\onedrive\\documentos\\visual studio y vsc\\visual studio\\software_proyecto\\proyectofinaldesoftware\\views\\home\\cambiarcontrasena.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\cambiarcontrasena.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\source\\repos\\software_proyecto\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\source\\repos\\software_proyecto\\repository\\pacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:repository\\pacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\services\\personaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:services\\personaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\source\\repos\\software_proyecto\\views\\home\\iniciarsesion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\iniciarsesion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\onedrive\\documentos\\visual studio y vsc\\visual studio\\software_proyecto\\proyectofinaldesoftware\\utilitys\\db\\eliminarcodigo_sp.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:utilitys\\db\\eliminarcodigo_sp.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,111 +42,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ConexionBDUtility.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\Utilitys\\ConexionBDUtility.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Utilitys\\ConexionBDUtility.cs",
               "RelativeDocumentMoniker": "Utilitys\\ConexionBDUtility.cs",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\Utilitys\\ConexionBDUtility.cs",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Utilitys\\ConexionBDUtility.cs",
               "RelativeToolTip": "Utilitys\\ConexionBDUtility.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T00:26:37.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Encrypt.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\Utilitys\\Encrypt.cs",
-              "RelativeDocumentMoniker": "Utilitys\\Encrypt.cs",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\Utilitys\\Encrypt.cs",
-              "RelativeToolTip": "Utilitys\\Encrypt.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwBEAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T23:57:23.842Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PacienteRepository.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\Repository\\PacienteRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\PacienteRepository.cs",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\Repository\\PacienteRepository.cs",
-              "RelativeToolTip": "Repository\\PacienteRepository.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwB0AAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T23:40:53.176Z",
+              "WhenOpened": "2024-04-28T23:21:20.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PacienteService.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\Services\\PacienteService.cs",
-              "RelativeDocumentMoniker": "Services\\PacienteService.cs",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\Services\\PacienteService.cs",
-              "RelativeToolTip": "Services\\PacienteService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T23:40:49.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IniciarSesion.cshtml",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\Views\\Home\\IniciarSesion.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\IniciarSesion.cshtml",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\Views\\Home\\IniciarSesion.cshtml",
-              "RelativeToolTip": "Views\\Home\\IniciarSesion.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-25T22:34:45.286Z",
+              "Title": "EliminarCodigo_SP.sql ",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Utilitys\\DB\\EliminarCodigo_SP.sql",
+              "RelativeDocumentMoniker": "Utilitys\\DB\\EliminarCodigo_SP.sql",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Utilitys\\DB\\EliminarCodigo_SP.sql",
+              "RelativeToolTip": "Utilitys\\DB\\EliminarCodigo_SP.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-28T23:12:15.096Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PersonaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\Repository\\PersonaRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\PersonaRepository.cs",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\Repository\\PersonaRepository.cs",
-              "RelativeToolTip": "Repository\\PersonaRepository.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAYwDMAAAAhAAAA",
+              "Title": "BuscarCorreo.cshtml",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Views\\Home\\BuscarCorreo.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\BuscarCorreo.cshtml",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Views\\Home\\BuscarCorreo.cshtml",
+              "RelativeToolTip": "Views\\Home\\BuscarCorreo.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-28T21:13:39.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CodigoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Repository\\CodigoRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\CodigoRepository.cs",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Repository\\CodigoRepository.cs",
+              "RelativeToolTip": "Repository\\CodigoRepository.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAYwF8AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T22:18:05.878Z",
+              "WhenOpened": "2024-04-27T20:38:29.837Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "PersonaService.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\Services\\PersonaService.cs",
-              "RelativeDocumentMoniker": "Services\\PersonaService.cs",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\Services\\PersonaService.cs",
-              "RelativeToolTip": "Services\\PersonaService.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwBEAAABbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T22:10:50.94Z",
+              "Title": "CambiarContrasena.cshtml",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Views\\Home\\CambiarContrasena.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\CambiarContrasena.cshtml",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Views\\Home\\CambiarContrasena.cshtml",
+              "RelativeToolTip": "Views\\Home\\CambiarContrasena.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-28T20:10:49.728Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PersonaService.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Services\\PersonaService.cs",
+              "RelativeDocumentMoniker": "Services\\PersonaService.cs",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Services\\PersonaService.cs",
+              "RelativeToolTip": "Services\\PersonaService.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAE8AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T18:25:55.833Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\Software_Proyecto\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAxwA0AAAAuAAAA",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAUwF4AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T19:54:18.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T19:54:18.358Z"
             }
           ]
         }

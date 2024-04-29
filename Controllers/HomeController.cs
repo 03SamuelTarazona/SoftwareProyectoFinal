@@ -1,5 +1,4 @@
 ﻿using Software_Proyecto.Dto;
-using Software_Proyecto.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +14,38 @@ namespace Software_Proyecto.Controllers {
         {
             return View();
         }
-      
+      public ActionResult BuscarCorreo()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult BuscarCorreo(string correo)
+        {
+            PersonaService personaService = new PersonaService();
+            personaService.EnviarCodigo(correo);
+            ViewData["Correo"] = correo;
+            return View("CambiarContrasena");
+        }
+        public ActionResult CambiarContrasena()
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CambiarContrasena(string correo, string codigo, string contrasena)
+        {
+            PersonaService personaService = new PersonaService();
+            if (personaService.actualizarContrasena(correo,codigo,contrasena) != 0) { 
+            
+                return View("IniciarSesion");
+            }
+            else
+            {
+                return View("Index");
+            }
+
+        }
+
 
         [HttpPost]
         public ActionResult RegistroPaciente(PacienteDto paciente) {
@@ -53,18 +83,14 @@ namespace Software_Proyecto.Controllers {
             
             PersonaDto personalogueo = personaService.iniciarSesion(persona,contrasena);
 
-            if (personalogueo.id_rol ==1)
+            if (personalogueo.id_rol == 1)
             {
-                if (personalogueo.respuesta !=0)
+                if (personalogueo.respuesta != 0)
                 {
                     Session["UserLogged"] = personalogueo;
                     return View("VistaPaciente");
                 }
-                else
-                {
-                    return View("Index");
-                }
-            }
+            }  
 
             return View();
         }

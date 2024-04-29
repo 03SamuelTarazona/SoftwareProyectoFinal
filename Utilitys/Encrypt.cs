@@ -13,15 +13,5 @@ public class Encrypt
         }
     }
 
-    public bool verificarContrasena(string contrasenaIngresada, string hashContrasenaAlmacenada)
-    {
-        using( var sha512 = SHA512.Create())
-        {
-            var bytesContrasenaIngresada = Encoding.UTF8.GetBytes(contrasenaIngresada);
-            var hashContrasenaIngresada = sha512.ComputeHash(bytesContrasenaIngresada);
-            return Convert.ToBase64String(hashContrasenaIngresada) == hashContrasenaAlmacenada;
-        }
-    }
-
 
 }
