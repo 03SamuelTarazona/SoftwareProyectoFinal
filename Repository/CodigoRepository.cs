@@ -7,35 +7,33 @@ using System.Web;
 
 public class CodigoRepository
 {
-        public int registroRecuperacion(int id_persona, string codigo)
+    public int registroRecuperacion(int id_persona, string codigo)
+    {
+        int comando = 0;
+
+        ConexionBDUtility conexion = new ConexionBDUtility();
+        conexion.Connect();
+        
+        string SQL = "INSERT INTO dbo.NumRecuperacion (id_persona, codigo) " +
+                             "VALUES (@id_persona, @codigo)";
+        using (SqlCommand command = new SqlCommand(SQL, conexion.Conexion()))
         {
-            int comando = 0;
-            
-                ConexionBDUtility conexion = new ConexionBDUtility();
-                conexion.Connect();
-                string horaActual = DateTime.Now.ToString("hh:mm:ss");
-                var parseHoraActual = DateTime.Parse(horaActual);
-        string SQL = "INSERT INTO dbo.NumRecuperacion (id_persona, codigo, hora_envio) " +
-                             "VALUES (@id_persona, @codigo, @hora_envio)";
-                using (SqlCommand command = new SqlCommand(SQL, conexion.Conexion()))
-                {
-                    command.Parameters.AddWithValue("@id_persona", id_persona);
-                    command.Parameters.AddWithValue("@codigo", codigo);
-            command.Parameters.AddWithValue("@hora_envio", parseHoraActual);
+            command.Parameters.AddWithValue("@id_persona", id_persona);
+            command.Parameters.AddWithValue("@codigo", codigo);
             command.ExecuteNonQuery();
-                }
-            conexion.Disconnect();
-            comando = 1;
-            return comando;
         }
+        conexion.Disconnect();
+        comando = 1;
+        return comando;
+    }
 
 
-        public Codigo SeleccionarCodigo(int id_persona)
-        {
+    public Codigo SeleccionarCodigo(int id_persona)
+    {
         ConexionBDUtility conexion = new ConexionBDUtility();
         Codigo codigo = null;
         try
-                    {
+        {
             conexion.Connect();
             string SQL = "SELECT id_persona,codigo FROM dbo.NumRecuperacion WHERE (id_persona = @id_persona)";
             using (SqlCommand command = new SqlCommand(SQL, conexion.Conexion()))
@@ -72,31 +70,46 @@ public class CodigoRepository
             conexion.Disconnect();
         }
         return codigo;
-        }
-
-    public void eliminarCodigo(int id_codigo)
-    {
-        Codigo codigo = null;
-        ConexionBDUtility conexion = new ConexionBDUtility();
-        conexion.Connect();
-        try
-        {
-            SqlCommand comando = new SqlCommand("EliminarCodigo_SP", conexion.Conexion());
-            comando.CommandType = System.Data.CommandType.StoredProcedure;
-            comando.Parameters.Add("@id_codigo", System.Data.SqlDbType.Int).Value = id_codigo;
-            comando.ExecuteNonQuery();
-        }
-        catch (Exception e)
-        {
-            codigo = new Codigo
-            {
-                mensaje = "No se pudo eliminar el codigo: " + e.Message
-            };
-        }
-        conexion.Disconnect();
     }
 
+    public int eliminarCodigo(int id_persona)
+    {
+        {
+            ConexionBDUtility conexion = new ConexionBDUtility();
+            int codigo = 1;
+            try
+            {
+                conexion.Connect();
+                string SQL = "DELETE  FROM dbo.NumRecuperacion WHERE (id_persona = @id_persona)";
+                using (SqlCommand command = new SqlCommand(SQL, conexion.Conexion()))
+                {
+                    command.Parameters.AddWithValue("@id_persona", id_persona);
 
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        
+                        return codigo;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                codigo = 0;
+
+
+            }
+            finally
+            {
+                conexion.Disconnect();
+            }
+            return codigo;
+        }
+
+
+
+
+    }
 }   
           
 

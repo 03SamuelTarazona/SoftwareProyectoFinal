@@ -24,22 +24,25 @@ public class PersonaService
     }
     public PersonaDto EnviarCodigo(String correo)
     {
-        PersonaDto persona = new PersonaDto();
+        PersonaDto persona1 = new PersonaDto();
         CorreoUtility correoUtility = new CorreoUtility();
         CodigoRepository recuperacion = new CodigoRepository();
         PersonaRepository personaRepository = new PersonaRepository();
         CodigoUtility generadorCodigo = new CodigoUtility();
+        CodigoRepository codigoRepository = new CodigoRepository();
 
         if (personaRepository.buscarPersona(correo))
         {
-            persona = personaRepository.SeleccionarPersona(correo);
-            String codigo = generadorCodigo.NumeroAleatorio().ToString();
+            persona1 = personaRepository.SeleccionarPersona(correo);
 
-            
+            string codigo = generadorCodigo.NumeroAleatorio().ToString();
+
+            codigoRepository.eliminarCodigo(persona1.id_persona);
             correoUtility.enviarCorreoCodigo(correo, codigo);
+            
 
             
-            int resultado = recuperacion.registroRecuperacion(persona.id_persona, codigo);
+            int resultado = recuperacion.registroRecuperacion(persona1.id_persona, codigo);
 
             if (resultado == 1)
             {
@@ -50,12 +53,12 @@ public class PersonaService
                 Console.WriteLine("Error al registrar el código."); 
             }
 
-            return persona;
+            return persona1;
         }
         else
         {
             Console.WriteLine("No se encontró la persona."); 
-            return persona;
+            return persona1;
         }
     }
 
@@ -74,6 +77,7 @@ public class PersonaService
         {
             string contrasenaencryp=encrypt.encriptarSHA512(contrasena);
             personaRepository.ActualizarContrasena(correo, contrasenaencryp);
+            codigoRepository.eliminarCodigo(personaDto.id_persona);
         }
 
         return m;

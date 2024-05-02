@@ -33,7 +33,7 @@ namespace Software_Proyecto.Controllers {
         }
         [HttpPost]
         public ActionResult CambiarContrasena(string correo, string codigo, string contrasena)
-        {
+       {
             PersonaService personaService = new PersonaService();
             if (personaService.actualizarContrasena(correo,codigo,contrasena) != 0) { 
             
