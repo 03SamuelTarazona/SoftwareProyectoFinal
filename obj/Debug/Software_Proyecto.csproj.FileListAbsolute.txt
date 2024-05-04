@@ -134,3 +134,6 @@ C:\Users\samue\OneDrive\Documentos\Visual studio y VSC\Visual Studio\Software_Pr
 C:\Users\samue\OneDrive\Documentos\Visual studio y VSC\Visual Studio\Software_Proyecto\ProyectoFinalDeSoftware\obj\Debug\Software.04755C14.Up2Date
 C:\Users\samue\OneDrive\Documentos\Visual studio y VSC\Visual Studio\Software_Proyecto\ProyectoFinalDeSoftware\obj\Debug\Software_Proyecto.dll
 C:\Users\samue\OneDrive\Documentos\Visual studio y VSC\Visual Studio\Software_Proyecto\ProyectoFinalDeSoftware\obj\Debug\Software_Proyecto.pdb
+C:\Users\samue\OneDrive\Documentos\Visual studio y VSC\Visual Studio\Software_Proyecto\ProyectoFinalDeSoftware\bin\BouncyCastle.Crypto.dll
+C:\Users\samue\OneDrive\Documentos\Visual studio y VSC\Visual Studio\Software_Proyecto\ProyectoFinalDeSoftware\bin\itextsharp.dll
+C:\Users\samue\OneDrive\Documentos\Visual studio y VSC\Visual Studio\Software_Proyecto\ProyectoFinalDeSoftware\bin\itextsharp.xml

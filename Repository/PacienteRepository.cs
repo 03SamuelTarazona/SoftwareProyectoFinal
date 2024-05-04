@@ -66,4 +66,40 @@ public class PacienteRepository
             return false;
         }
     }
+    public List<PacienteDto> MostrarPacientes()
+    {
+        
+      ConexionBDUtility conexion = new ConexionBDUtility();
+       List<PacienteDto> pacientes = new List<PacienteDto>();
+        conexion.Connect();
+
+        string SQL = "SELECT  id_persona,nombres, apellidos, correo, genero FROM dbo.Persona WHERE id_rol=1";
+
+        using (SqlCommand command = new SqlCommand(SQL, conexion.Conexion()))
+        {
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    PacienteDto paciente = new PacienteDto()
+                    {
+                        persona = new PersonaDto()
+                    };
+                    {
+                        paciente.persona.id_persona = Convert.ToInt32(reader["id_persona"]);
+
+                        paciente.persona.nombres = reader["nombres"].ToString();
+                        paciente.persona.apellidos = reader["apellidos"].ToString();
+                        paciente.persona.correo = reader["correo"].ToString();
+                        paciente.persona.genero = reader["genero"].ToString();
+                    };
+
+                    pacientes.Add(paciente);
+                }
+            }
+        }
+        conexion.Disconnect();
+        return pacientes;
+    }
+
 }

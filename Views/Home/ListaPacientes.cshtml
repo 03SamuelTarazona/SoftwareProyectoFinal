@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "ListaPacientes";
+}
+@{
+    var pacientes = ViewData["paciente"] as List<Software_Proyecto.Dto.PacienteDto>;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListaMedicos</title>
+</head>
+<body>
+
+ 
+        <table>
+            <thead>
+                <tr>
+                   
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Correo</th>
+                    <th>Genero</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var paciente in pacientes)
+                {
+                    <tr>
+                        
+                        <td>@paciente.persona.nombres</td>
+                        <td>@paciente.persona.apellidos</td>
+                        <td>@paciente.persona.correo</td>
+                        <td>@paciente.persona.genero</td>                       
+                    </tr>
+                }
+            </tbody>
+        </table>
+  
+
+  
+    <div>
+        @using (Html.BeginForm("DescargarPdfPacientes", "Home", FormMethod.Post))
+        {
+            <button type="submit">
+                Descargar PDF de Pacientes
+            </button>
+        }    @if (ViewData["Mensaje"] != null)
+        {
+            <p>@ViewData["Mensaje"]</p>
+        }
+    </div>
+
+  
+
+</body>
+</html>
