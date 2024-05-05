@@ -8,6 +8,6 @@ namespace Software_Proyecto.Dto
     public class MedicoDto
     {
         public PersonaDto persona { get; set; }
-        public int especialidad { get; set; }
+        public string especialidad { get; set; }
     }
 }

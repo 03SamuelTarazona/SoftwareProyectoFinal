@@ -62,15 +62,20 @@ public class MedicoRepository
 
                         MedicoDto medico = new MedicoDto
                         {
+
                             persona = new PersonaDto(),
-                            especialidad = Convert.ToInt32(reader["especialidad"]) 
-                        };
+                          
+
+                    };
 
                         medico.persona.id_persona = Convert.ToInt32(reader["id_persona"]);
                         medico.persona.nombres = reader["nombres"].ToString();
                         medico.persona.apellidos = reader["apellidos"].ToString();
                         medico.persona.correo = reader["correo"].ToString();
                         medico.persona.genero = reader["genero"].ToString();
+                        medico.especialidad = reader["especialidad"].ToString();
+                        
+
 
                         medicos.Add(medico);
                     }

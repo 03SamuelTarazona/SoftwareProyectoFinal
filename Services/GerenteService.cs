@@ -34,6 +34,7 @@ namespace Software_Proyecto.Services
             var lista_p =pacienteRepository.MostrarPacientes();
             return lista_p;
         }
+
         public int EliminarMedico(int id)
         {
             int f = 0;

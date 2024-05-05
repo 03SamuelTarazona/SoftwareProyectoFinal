@@ -9,14 +9,15 @@ using System.Web.Mvc;
 
 
 
-namespace Software_Proyecto.Controllers { 
+namespace Software_Proyecto.Controllers
+{
     public class HomeController : Controller
     {
         public ActionResult RegistroPaciente()
         {
             return View();
         }
-      public ActionResult BuscarCorreo()
+        public ActionResult BuscarCorreo()
         {
             return View();
         }
@@ -30,15 +31,16 @@ namespace Software_Proyecto.Controllers {
         }
         public ActionResult CambiarContrasena()
         {
-
             return View();
         }
         [HttpPost]
+
         public ActionResult CambiarContrasena(string correo, string codigo, string contrasena)
-       {
+        {
             PersonaService personaService = new PersonaService();
-            if (personaService.actualizarContrasena(correo,codigo,contrasena) != 0) { 
-            
+            if (personaService.actualizarContrasena(correo, codigo, contrasena) != 0)
+            {
+
                 return View("IniciarSesion");
             }
             else
@@ -48,11 +50,11 @@ namespace Software_Proyecto.Controllers {
 
         }
 
-
         [HttpPost]
-        public ActionResult RegistroPaciente(PacienteDto paciente) {
+        public ActionResult RegistroPaciente(PacienteDto paciente)
+        {
 
-         
+
             PacienteService pacienteService = new PacienteService();
             PacienteDto resultado = pacienteService.registroUsuario(paciente);
 
@@ -66,7 +68,7 @@ namespace Software_Proyecto.Controllers {
                 return View(resultado);
             }
         }
-  public ActionResult IniciarSesion()
+        public ActionResult IniciarSesion()
         {
             return View();
         }
@@ -79,11 +81,11 @@ namespace Software_Proyecto.Controllers {
             return View();
         }
         [HttpPost]
-        public ActionResult IniciarSesion(PersonaDto persona,string contrasena)
+        public ActionResult IniciarSesion(PersonaDto persona, string contrasena)
         {
             PersonaService personaService = new PersonaService();
-            
-            PersonaDto personalogueo = personaService.iniciarSesion(persona,contrasena);
+
+            PersonaDto personalogueo = personaService.iniciarSesion(persona, contrasena);
 
             if (personalogueo.id_rol == 1)
             {
@@ -93,7 +95,7 @@ namespace Software_Proyecto.Controllers {
                     return View("VistaPaciente");
                 }
             }
-           else if (personalogueo.id_rol == 3)
+            else if (personalogueo.id_rol == 3)
             {
                 if (personalogueo.respuesta != 0)
                 {
@@ -106,7 +108,7 @@ namespace Software_Proyecto.Controllers {
         public ActionResult ListaPacientes()
         {
             GerenteService gerenteService = new GerenteService();
-            List<PacienteDto>paciente=gerenteService.Lista_Pacientes();
+            List<PacienteDto> paciente = gerenteService.Lista_Pacientes();
             ViewData["paciente"] = paciente;
             return View("ListaPacientes");
         }
@@ -117,7 +119,7 @@ namespace Software_Proyecto.Controllers {
             ViewData["medico"] = medico;
             return View("ListaMedicos");
 
-            
+
         }
         public ActionResult AgregarMedico()
         {
@@ -126,13 +128,13 @@ namespace Software_Proyecto.Controllers {
         [HttpPost]
         public ActionResult AgregarMedico(MedicoDto medico)
         {
-            GerenteService gerenteService=new GerenteService();
+            GerenteService gerenteService = new GerenteService();
             MedicoDto medicoDto = new MedicoDto();
-            medicoDto=gerenteService.registrarMedico(medico);
-            
-            
-                return ListaMedicos();
-          
+            medicoDto = gerenteService.registrarMedico(medico);
+
+
+            return ListaMedicos();
+
         }
         [HttpPost]
         public ActionResult DescargarPdfMedicos()
@@ -145,21 +147,21 @@ namespace Software_Proyecto.Controllers {
                 gerenteService.CrearPdfMedicos();
 
 
-                Response.Clear(); 
-                Response.ContentType = "application/pdf"; 
-                Response.AddHeader("Content-Disposition", "attachment; filename=Lista_Medicos.pdf"); 
+                Response.Clear();
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("Content-Disposition", "attachment; filename=Lista_Medicos.pdf");
 
-             
+
                 Response.WriteFile(tempFilePath);
 
                 Response.Flush();
 
-              
-                return new EmptyResult(); 
+
+                return new EmptyResult();
             }
             catch (Exception ex)
             {
-               
+
                 ViewData["Mensaje"] = "Error al generar el PDF: " + ex.Message;
                 return RedirectToAction("ListaMedicos");
             }
@@ -195,6 +197,12 @@ namespace Software_Proyecto.Controllers {
                 return RedirectToAction("ListaPacientes");
             }
         }
-
+        [HttpPost]
+        public ActionResult EliminarMedico(int id_persona)
+        {
+            GerenteService gerenteService = new GerenteService();
+            gerenteService.EliminarMedico(id_persona);
+            return ListaMedicos();
+        }
     }
 }

@@ -3,7 +3,35 @@
   "WorkspaceRootPath": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\onedrive\\documentos\\visual studio y vsc\\visual studio\\software_proyecto\\proyectofinaldesoftware\\services\\personaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\onedrive\\documentos\\visual studio y vsc\\visual studio\\software_proyecto\\proyectofinaldesoftware\\views\\home\\listamedicos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\listamedicos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\onedrive\\documentos\\visual studio y vsc\\visual studio\\software_proyecto\\proyectofinaldesoftware\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\onedrive\\documentos\\visual studio y vsc\\visual studio\\software_proyecto\\proyectofinaldesoftware\\services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\onedrive\\documentos\\visual studio y vsc\\visual studio\\software_proyecto\\proyectofinaldesoftware\\dto\\medicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:dto\\medicodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\onedrive\\documentos\\visual studio y vsc\\visual studio\\software_proyecto\\proyectofinaldesoftware\\views\\home\\agregarmedico.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\agregarmedico.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\onedrive\\documentos\\visual studio y vsc\\visual studio\\software_proyecto\\proyectofinaldesoftware\\services\\gerenteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:services\\gerenteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\onedrive\\documentos\\visual studio y vsc\\visual studio\\software_proyecto\\proyectofinaldesoftware\\repository\\medicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:repository\\medicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\services\\personaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:services\\personaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -19,14 +47,105 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ListaMedicos.cshtml",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Views\\Home\\ListaMedicos.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\ListaMedicos.cshtml",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Views\\Home\\ListaMedicos.cshtml",
+              "RelativeToolTip": "Views\\Home\\ListaMedicos.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAADEAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-05T16:36:18.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AgregarMedico.cshtml",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Views\\Home\\AgregarMedico.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\AgregarMedico.cshtml",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Views\\Home\\AgregarMedico.cshtml",
+              "RelativeToolTip": "Views\\Home\\AgregarMedico.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADsAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-05T16:34:35.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MedicoDto.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Dto\\MedicoDto.cs",
+              "RelativeDocumentMoniker": "Dto\\MedicoDto.cs",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Dto\\MedicoDto.cs",
+              "RelativeToolTip": "Dto\\MedicoDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T16:34:07.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAMMAAAAAAAAAAAAuwMkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T16:32:28.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PacienteService.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Services\\PacienteService.cs",
+              "RelativeDocumentMoniker": "Services\\PacienteService.cs",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Services\\PacienteService.cs",
+              "RelativeToolTip": "Services\\PacienteService.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T16:32:02.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "PersonaService.cs",
               "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Services\\PersonaService.cs",
               "RelativeDocumentMoniker": "Services\\PersonaService.cs",
               "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Services\\PersonaService.cs",
               "RelativeToolTip": "Services\\PersonaService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAYwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-04T15:22:33.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GerenteService.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Services\\GerenteService.cs",
+              "RelativeDocumentMoniker": "Services\\GerenteService.cs",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Services\\GerenteService.cs",
+              "RelativeToolTip": "Services\\GerenteService.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAwBQAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T16:30:56.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MedicoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Repository\\MedicoRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\MedicoRepository.cs",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Repository\\MedicoRepository.cs",
+              "RelativeToolTip": "Repository\\MedicoRepository.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwEsAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T16:30:44.756Z",
               "EditorCaption": ""
             }
           ]
