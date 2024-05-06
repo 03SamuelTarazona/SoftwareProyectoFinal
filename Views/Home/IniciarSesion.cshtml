@@ -9,28 +9,35 @@
     <title>IniciarSesion</title>
 </head>
 <body>
-    
+
 
     @using (Html.BeginForm("IniciarSesion", "Home", FormMethod.Post))
     {
         @Html.AntiForgeryToken()
-        <h1>Iniciar sesion</h1>
-        <div class="inputbox">
-            <ion-icon name="mail-outlane"></ion-icon>
-            <input type="email" id="correo" name="correo" required>
-            <label for="correo">Correo</label>
-        </div>
-        <div class="inputbox">
-            <ion-icon name="lock-closed-outline"></ion-icon>
-            <input type="password" id="contrasena" name="contrasena" required>
-            <label for="contrasena">Contraseña</label>
-        </div>
-            <button>Iniciar</button>
+        <div class="container">
+            <h2>Iniciar Sesion</h2>
+            <div class="inputbox">
+                <ion-icon name="mail-outlane"></ion-icon>
+                <input type="email" id="correo" name="correo" placeholder="Nombre de Usuario" required>
+                <!-- <label for="correo">Correo</label> -->
 
-            }  @if (ViewData["Mensaje"] != null)
-            {
-                <p>@ViewData["Mensaje"]</p>
-            }
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+                <!-- <label for="contrasena">Contraseña</label> -->
 
-    </body>
+            </div>
+            <button type="submit">Iniciar Sesion</button>
+            <div class="links">
+                <a asp-area="" asp-controller="Home" asp-action="CrearCuenta">Crear Cuenta</a> | <a asp-area="" asp-controller="Home" asp-action="RecuperarCuenta">Recuperar Cuenta</a>
+            </div>
+        </div>
+    }  @if (ViewData["Mensaje"] != null)
+    {
+        <p>@ViewData["Mensaje"]</p>
+    }
+
+</body>
+
 </html>
