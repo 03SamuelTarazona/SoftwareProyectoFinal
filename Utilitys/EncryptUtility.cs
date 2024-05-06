@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.Text;
-public class Encrypt
+public class EncryptUtility
 {
     public string encriptarSHA512(string contrasena)
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-public class Codigo
+public class CodigoDto
 {
     public int id_codigo { get; set; }
     public int id_persona { get; set; }

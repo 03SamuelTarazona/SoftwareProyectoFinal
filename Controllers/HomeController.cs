@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 
 
+
 namespace Software_Proyecto.Controllers
 {
     public class HomeController : Controller
@@ -84,15 +85,18 @@ namespace Software_Proyecto.Controllers
         public ActionResult IniciarSesion(PersonaDto persona, string contrasena)
         {
             PersonaService personaService = new PersonaService();
+         
 
             PersonaDto personalogueo = personaService.iniciarSesion(persona, contrasena);
 
             if (personalogueo.id_rol == 1)
             {
+                
                 if (personalogueo.respuesta != 0)
                 {
                     Session["UserLogged"] = personalogueo;
-                    return View("VistaPaciente");
+                    return View("ReservarCita");
+
                 }
             }
             else if (personalogueo.id_rol == 3)
@@ -203,6 +207,84 @@ namespace Software_Proyecto.Controllers
             GerenteService gerenteService = new GerenteService();
             gerenteService.EliminarMedico(id_persona);
             return ListaMedicos();
+        }
+        public ActionResult ReservarCita()
+        {
+            PersonaDto personaLogueo = Session["UserLogged"] as PersonaDto;
+            if (personaLogueo == null) 
+            {
+                return View("Error");
+            }
+
+            ViewBag.PersonaLogueo = personaLogueo; 
+            return View("ReservarCita");
+        }
+
+        [HttpPost]
+        public ActionResult ReservarCita(string correo,AgendaDto agenda)
+        {
+            PacienteService pacienteService = new PacienteService();    
+            pacienteService.ReservarCita(correo, agenda);
+            
+            return View();
+        }
+        public ActionResult  MostrarCitas()
+        {
+            MedicoService mediicoService = new MedicoService(); 
+            List<AgendaDto> agenda = mediicoService.Lista_Citas();
+            ViewData["agenda"] = agenda;
+            return View("MostrarCitas");
+        }
+        [HttpPost]
+        public ActionResult Detalles(AgendaDto agenda)
+        {
+            return View("DetallesForm", agenda);
+        }
+
+        [HttpPost]
+        public ActionResult DetallesForm(AgendaDto agenda)
+        {
+            MedicoService medicoService = new MedicoService();
+            int resultado = medicoService.ActualizarAgenda(agenda);
+            if (resultado != 0)
+            {
+                return MostrarCitas();
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        [HttpPost]
+        public ActionResult DescargarHistorial()
+        {
+            try
+            {
+               MedicoService medicoService=new MedicoService(); 
+
+                string tempFilePath = Path.Combine(Path.GetTempPath(), "Historial.pdf");
+                medicoService.CrearPdfHistorial();
+
+
+                Response.Clear();
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("Content-Disposition", "attachment; filename=Historial.pdf");
+
+
+                Response.WriteFile(tempFilePath);
+
+                Response.Flush();
+
+
+                return new EmptyResult();
+            }
+            catch (Exception ex)
+            {
+
+                ViewData["Mensaje"] = "Error al generar el PDF: " + ex.Message;
+                return RedirectToAction("MostrarCitas");
+            }
         }
     }
 }

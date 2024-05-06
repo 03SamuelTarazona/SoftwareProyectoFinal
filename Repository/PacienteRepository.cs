@@ -8,6 +8,35 @@ using Software_Proyecto.Utilitys;
 
 public class PacienteRepository
 {
+
+    public int registroCita(int id,AgendaDto agenda)
+    {
+        int comando = 0;
+        try
+        {
+            ConexionBDUtility conexion = new ConexionBDUtility();
+            conexion.Connect();
+            string SQL = "INSERT INTO dbo.Agenda (id_persona, fecha, hora_inicio, estado)"
+                        + "VALUES (@id_persona, @fecha, @hora_inicio, @estado)";
+            using (SqlCommand command = new SqlCommand(SQL, conexion.Conexion()))
+            {
+                command.Parameters.AddWithValue("@id_persona", id);
+                command.Parameters.AddWithValue("@fecha", agenda.fecha);
+                command.Parameters.AddWithValue("@hora_inicio",agenda.hora_inicio);
+                command.Parameters.AddWithValue("@hora_fin", agenda.hora_fin);
+                command.Parameters.AddWithValue("@estado", agenda.estado);
+                command.ExecuteNonQuery();
+            }
+            conexion.Disconnect();
+            comando = 1;
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+        }
+        return comando;
+    }
+
     public int registroUsuario(PacienteDto paciente)
     {
         int comando = 0;
@@ -18,8 +47,7 @@ public class PacienteRepository
 
             string SQL = "INSERT INTO dbo.Persona (id_rol, nombres, apellidos,documento, correo, contrasena, genero,fecha_nacimiento, telefono,seguro_social)"
                         + "VALUES (@id_rol,@nombres, @apellidos,@documento, @correo, @contrasena, @genero,@fecha_nacimiento, @telefono,@seguro_social)";
-
-
+   
             using (SqlCommand command = new SqlCommand(SQL, conexion.Conexion()))
             {
                 command.Parameters.AddWithValue("@id_rol", paciente.persona.id_rol);

@@ -118,10 +118,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Dto\Codigo.cs" />
+    <Compile Include="Dto\AgendaDto.cs" />
+    <Compile Include="Dto\CodigoDto.cs" />
     <Compile Include="Dto\MedicoDto.cs" />
     <Compile Include="Dto\PacienteDto.cs" />
     <Compile Include="Dto\PersonaDto.cs" />
+    <Compile Include="Dto\TratamientoDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -131,13 +133,14 @@
     <Compile Include="Repository\PacienteRepository.cs" />
     <Compile Include="Repository\PersonaRepository.cs" />
     <Compile Include="Services\GerenteService.cs" />
+    <Compile Include="Services\MedicoService.cs" />
     <Compile Include="Services\PacienteService.cs" />
     <Compile Include="Services\PersonaService.cs" />
     <Compile Include="Utilitys\CodigoUtility.cs" />
     <Compile Include="Utilitys\ConexionBDUtility.cs" />
     <Compile Include="Utilitys\CorreoUtility.cs" />
-    <Compile Include="Utilitys\Encrypt.cs" />
-    <Compile Include="Utilitys\Pdf.cs" />
+    <Compile Include="Utilitys\EncryptUtility.cs" />
+    <Compile Include="Utilitys\ReportesUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -174,6 +177,9 @@
     <Content Include="Views\Home\AgregarMedico.cshtml" />
     <Content Include="Views\Home\ListaMedicos.cshtml" />
     <Content Include="Views\Home\ListaPacientes.cshtml" />
+    <Content Include="Views\Home\ReservarCita.cshtml" />
+    <Content Include="Views\Home\MostrarCitas.cshtml" />
+    <Content Include="Views\Home\DetallesForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
