@@ -9,7 +9,7 @@ using iTextSharp.text.pdf.codec.wmf;
 using Software_Proyecto.Dto;
 
 
-    public class Pdf
+    public class ReportesUtility
     {
     public void CrearPdfMedicos(List<MedicoDto> medicos, string filePath)
     {
@@ -103,6 +103,60 @@ using Software_Proyecto.Dto;
             table.AddCell(paciente.persona.correo);
             table.AddCell(paciente.persona.genero);
         
+        }
+
+        doc.Add(table);
+
+        doc.Close();
+    }
+    public void CrearPdfHistorial(List<AgendaDto> agendas, string filePath)
+    {
+        Document doc = new Document(PageSize.A4);
+        PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(filePath, FileMode.Create));
+
+        doc.Open();
+
+
+        BaseColor titleColor = new BaseColor(0, 51, 102);
+        Font titleFont = FontFactory.GetFont("Arial", 18, Font.BOLD, titleColor);
+
+
+        Paragraph titulo = new Paragraph("Historial", titleFont)
+        {
+            Alignment = Element.ALIGN_CENTER
+        };
+        doc.Add(titulo);
+
+        doc.Add(new Paragraph("\n"));
+
+
+        PdfPTable table = new PdfPTable(6);
+
+
+        BaseColor headerColor = new BaseColor(204, 204, 255);
+
+
+        table.AddCell(new PdfPCell(new Phrase("ID ", FontFactory.GetFont("Arial", 12, Font.BOLD))) { BackgroundColor = headerColor });
+        table.AddCell(new PdfPCell(new Phrase("ID Persona", FontFactory.GetFont("Arial", 12, Font.BOLD))) { BackgroundColor = headerColor });
+        table.AddCell(new PdfPCell(new Phrase("Fecha", FontFactory.GetFont("Arial", 12, Font.BOLD))) { BackgroundColor = headerColor });
+        table.AddCell(new PdfPCell(new Phrase("Hora_Inicio", FontFactory.GetFont("Arial", 12, Font.BOLD))) { BackgroundColor = headerColor });
+        table.AddCell(new PdfPCell(new Phrase("Hora_Fin", FontFactory.GetFont("Arial", 12, Font.BOLD))) { BackgroundColor = headerColor });
+        
+        table.AddCell(new PdfPCell(new Phrase("Descripcion", FontFactory.GetFont("Arial", 12, Font.BOLD))) { BackgroundColor = headerColor });
+
+
+        foreach (var agenda in agendas)
+        {
+            table.AddCell(agenda.id_agenda.ToString());
+            table.AddCell(agenda.id_persona.ToString());
+            table.AddCell(agenda.fecha.ToString());
+            table.AddCell(agenda.hora_inicio.ToString());
+            table.AddCell(agenda.hora_fin.ToString());
+            table.AddCell(agenda.descripcion.ToString());
+
+
+
+
         }
 
         doc.Add(table);

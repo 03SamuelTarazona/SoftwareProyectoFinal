@@ -1,4 +1,5 @@
 ﻿
+using Software_Proyecto.Dto;
 using Software_Proyecto.Utilitys;
 
 using System;
@@ -12,7 +13,7 @@ public class PersonaService
 
     public PersonaDto iniciarSesion(PersonaDto persona, String contrasena)
     {
-        Encrypt encrypt = new Encrypt();
+        EncryptUtility encrypt = new EncryptUtility();
         PersonaRepository personaRepository = new PersonaRepository();
         PersonaDto personaResp = new PersonaDto();
 
@@ -67,8 +68,8 @@ public class PersonaService
         int m = 0;
         PersonaRepository personaRepository = new PersonaRepository();
         PersonaDto personaDto = new PersonaDto();   
-        Codigo codigo1 = new Codigo();
-        Encrypt encrypt = new Encrypt();    
+        CodigoDto codigo1 = new CodigoDto();
+        EncryptUtility encrypt = new EncryptUtility();    
         CodigoRepository codigoRepository = new CodigoRepository();
 
         personaDto = personaRepository.SeleccionarPersona(correo);
@@ -82,7 +83,23 @@ public class PersonaService
 
         return m;
     }
+    public PacienteDto mapeo(PersonaDto pers)
+    {
+        PacienteDto paciente = new PacienteDto();
+        paciente.persona = new PersonaDto();
+        paciente.persona.id_persona = pers.id_persona;
+        paciente.persona.id_rol = pers.id_rol;
+        paciente.persona.nombres = pers.nombres;
+        paciente.persona.apellidos = pers.apellidos;
+        paciente.persona.fecha_nacimiento = pers.fecha_nacimiento;
+        paciente.persona.correo = pers.correo;
+        paciente.persona.contrasena = pers.contrasena;
+        paciente.persona.genero = pers.genero;
+        paciente.persona.respuesta = pers.respuesta;
+        paciente.persona.mensaje = pers.mensaje;
 
+        return paciente;
+    }
 
 }
 

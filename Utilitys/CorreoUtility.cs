@@ -15,9 +15,10 @@ using System.Web.Mvc;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.WebControls;
 using Software_Proyecto.Utilitys;
+using Software_Proyecto.Dto;
 
 
-    public class CorreoUtility
+public class CorreoUtility
     {
         private SmtpClient cliente;
         private MailMessage email;
@@ -71,11 +72,11 @@ using Software_Proyecto.Utilitys;
 
                 "<div class='content'>" +
                 "<h2>Buen dia" + "</h2>" +
-                "<p>Esperamos que este correo te encuentre bien.</p>" +
-                "<p>El motivo de este correo es porque olvidaste o quieres cambiar tu contraseña.</p>" +
+                "<p>Esperamos que te ecuentres bien.</p>" +
+                "<p>Este correo responde a una solicitud para el cambio de tu contraseña.</p>" +
                 "<p>Este es tu codigo para cambiar tu contraseña:"+"</p>" +
                 "<p class=´codigo´>" + codigo + "</p>" +
-                "<p>¡Nos vemos pronto!</p>" +
+                "<p>Este codigo es de un unico uso.</p>" +
                 "</body>" +
                 "</html>";
 

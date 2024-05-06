@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "ReservarCita";
+
+   
+
+}
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Agenda</title>
+</head>
+<body>
+    @using (Html.BeginForm("ReservarCita", "Home", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+    <div>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required>
+    </div>
+
+        <div>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+        </div>
+
+
+        <div>
+            <label for="hora_inicio">Hora de Inicio:</label>
+            <input type="time" id="hora_inicio" name="hora_inicio" required>
+        </div>
+
+
+
+
+        <div>
+            <input type="text" id="estado" name="estado" value="Reservado" hidden>
+
+        </div>
+
+
+        <div>
+            <button type="submit">Enviar</button>
+        </div>
+    }  @if (ViewData["Mensaje"] != null)
+    {
+        <p>@ViewData["Mensaje"]</p>
+    }
+</body>
+</html>

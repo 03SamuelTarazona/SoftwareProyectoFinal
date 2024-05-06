@@ -1,0 +1,74 @@
+﻿@{  
+   ViewBag.Title = "MostrarCitas";
+}
+@{
+    var agendas= ViewData["agenda"] as List<Software_Proyecto.Dto.AgendaDto>;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListaMedicos</title>
+</head>
+<body>
+
+
+    <table>
+        <thead>
+            <tr>
+
+                <th>ID  Persona</th>
+                <th>Fecha</th>
+                <th>Hora Inicio</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var agenda in agendas)
+            {
+                <tr>
+
+                    <td>@agenda.id_persona</td>
+                    <td>@agenda.fecha</td>
+                    <td>@agenda.hora_inicio</td>
+                    <td>
+                        @using (Html.BeginForm("Detalles", "Home", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="id_agenda" value=@agenda.id_agenda>
+                            <input type="hidden" name="id_persona" value=@agenda.id_persona>
+                            <input type="hidden" name="fecha" value=@agenda.fecha>
+                            <input type="hidden" name="hora_inicio" value=@agenda.hora_inicio>
+                            <input type="hidden" name="estado" value=@agenda.estado>
+                            <button type="submit" onclick="return " class="boton-icono"><img src="~/Scripts/img/usuario (1).png" class="icono" alt="Detalles"></button>
+
+                        }  @if (ViewData["Mensaje"] != null)
+                        {
+                            <p>@ViewData["Mensaje"]</p>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        @using (Html.BeginForm("DescargarHistorial", "Home", FormMethod.Post))
+        {
+            <button type="submit">
+                Descargar PDF 
+            </button>
+        }    @if (ViewData["Mensaje"] != null)
+        {
+            <p>@ViewData["Mensaje"]</p>
+        }
+    </div>
+
+
+
+
+
+
+</body>
+</html>

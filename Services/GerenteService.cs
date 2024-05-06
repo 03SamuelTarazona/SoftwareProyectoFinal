@@ -16,7 +16,7 @@ namespace Software_Proyecto.Services
                 medico.persona.id_rol = 2;
             
 
-                Encrypt encrypt = new Encrypt();            
+                EncryptUtility encrypt = new EncryptUtility();            
                 medico.persona.contrasena = encrypt.encriptarSHA512(medico.persona.contrasena);
                 int res = medicoRepository.registroMedico(medico);
              
@@ -45,7 +45,7 @@ namespace Software_Proyecto.Services
 
         public string CrearPdfMedicos()
         {
-            Pdf reporte = new Pdf();
+            ReportesUtility reporte = new ReportesUtility();
             var lista = Lista_Medicos();
 
             string tempFilePath = Path.Combine(Path.GetTempPath(), "Lista_Medicos.pdf");
@@ -55,7 +55,7 @@ namespace Software_Proyecto.Services
         }
         public string CrearPdfPacientes()
         {
-            Pdf reporte = new Pdf();
+            ReportesUtility reporte = new ReportesUtility();
             var lista = Lista_Pacientes();
 
             string tempFilePath = Path.Combine(Path.GetTempPath(), "Lista_Pacientes.pdf");

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using Software_Proyecto.Dto;
 using Software_Proyecto.Utilitys;
 
 public class PersonaRepository
@@ -39,7 +40,7 @@ public class PersonaRepository
         try
         {
             conexion.Connect();
-            string SQL = "SELECT id_persona, id_rol, nombres, apellidos, documento, correo, contrasena, genero, fecha_nacimiento, estado FROM dbo.Persona WHERE correo = @correo";
+            string SQL = "SELECT id_persona, id_rol, nombres, apellidos, documento, correo, contrasena, genero, fecha_nacimiento FROM dbo.Persona WHERE correo = @correo";
             using (SqlCommand command = new SqlCommand(SQL, conexion.Conexion()))
             {
                 command.Parameters.AddWithValue("@correo", correo);
@@ -65,7 +66,7 @@ public class PersonaRepository
                                 correo = reader["correo"].ToString(),
                                 genero = reader["genero"].ToString(),
                                 fecha_nacimiento = reader["fecha_nacimiento"].ToString(),
-                                estado = !reader.IsDBNull(reader.GetOrdinal("estado")) ? Convert.ToInt32(reader["estado"]) : 1
+                                
                             };
                             persona.respuesta = 1;
                             persona.mensaje = "Inicio correcto";
@@ -131,12 +132,13 @@ public class PersonaRepository
         }
         return comando;
     }
+
     public PersonaDto SeleccionarPersona(string correo)
     {
         ConexionBDUtility conexion = new ConexionBDUtility();
         PersonaDto persona = null;
         PersonaDto personaResp = new PersonaDto();
-        Encrypt encr = new Encrypt();
+        EncryptUtility encr = new EncryptUtility();
 
         try
         {
@@ -187,5 +189,6 @@ public class PersonaRepository
         }
         return persona;
     }
+  
 
 }

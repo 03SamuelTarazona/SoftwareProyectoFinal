@@ -28,10 +28,10 @@ public class CodigoRepository
     }
 
 
-    public Codigo SeleccionarCodigo(int id_persona)
+    public CodigoDto SeleccionarCodigo(int id_persona)
     {
         ConexionBDUtility conexion = new ConexionBDUtility();
-        Codigo codigo = null;
+        CodigoDto codigo = null;
         try
         {
             conexion.Connect();
@@ -43,7 +43,7 @@ public class CodigoRepository
                 {
                     if (reader.Read())
                     {
-                        codigo = new Codigo
+                        codigo = new CodigoDto
                         {
                             id_persona = Convert.ToInt32(reader["id_persona"]),
                             codigo = reader["codigo"].ToString()
@@ -60,7 +60,7 @@ public class CodigoRepository
         }
         catch (Exception ex)
         {
-            codigo = new Codigo
+            codigo = new CodigoDto
             {
                 mensaje = "Error al traer la informacion: " + ex.Message
             };
