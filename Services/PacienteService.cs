@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Software_Proyecto.Utilitys;
 
 
 
@@ -11,13 +12,19 @@ public class PacienteService
 {
     public PacienteDto registroUsuario(PacienteDto paciente)
     {
+        SqlInyectionUtility reemplazar = new SqlInyectionUtility();
+        
         EncryptUtility encrypt = new EncryptUtility();
         PacienteDto pacienteResp = new PacienteDto();
         pacienteResp.persona = new PersonaDto();
 
         PacienteRepository pacienteRepository = new PacienteRepository();
-
-
+        paciente.persona.nombres = reemplazar.Seguridad(paciente.persona.nombres);
+        paciente.persona.apellidos = reemplazar.Seguridad(paciente.persona.apellidos);
+        paciente.persona.documento = reemplazar.Seguridad(paciente.persona.documento);
+        paciente.persona.correo = reemplazar.Seguridad(paciente.persona.correo);
+        paciente.telefono= reemplazar.Seguridad(paciente.telefono);
+        paciente.seguro_social= reemplazar.Seguridad(paciente.seguro_social);
 
         if (pacienteRepository.buscarPaciente(paciente.persona.correo))
         {
@@ -27,9 +34,10 @@ public class PacienteService
         else
         {
 
+
             paciente.persona.id_rol = 1;
-            paciente.persona.estado = 1;
-            paciente.persona.contrasena = encrypt.encriptarSHA512(paciente.persona.contrasena);
+            paciente.persona.contrasena=encrypt.encriptarSHA512(paciente.persona.contrasena);
+           
             int resultadoRegistro = pacienteRepository.registroUsuario(paciente);
 
             if (resultadoRegistro != 0)

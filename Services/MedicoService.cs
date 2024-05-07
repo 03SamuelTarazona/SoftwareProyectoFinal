@@ -12,17 +12,18 @@ public class MedicoService
     public List<AgendaDto> Lista_Citas()
     {
         MedicoRepository medicoRepo = new MedicoRepository();
+   
         var Lista = medicoRepo.MostrarCitas();
         return Lista;
     }
     public int ActualizarAgenda(AgendaDto agenda)
     {
         int fila = 0;
-       MedicoRepository medicoRepository = new MedicoRepository();  
-
+       MedicoRepository medicoRepository = new MedicoRepository();
+        SqlInyectionUtility reemplazar = new SqlInyectionUtility();
         try
         {
-           
+            agenda.descripcion = reemplazar.Seguridad(agenda.descripcion);
             agenda.estado = "Revisado";
             fila = medicoRepository.Detalles(agenda);
 

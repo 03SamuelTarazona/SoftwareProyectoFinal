@@ -13,10 +13,14 @@ public class PersonaService
 
     public PersonaDto iniciarSesion(PersonaDto persona, String contrasena)
     {
+        SqlInyectionUtility reemplazar = new SqlInyectionUtility();
         EncryptUtility encrypt = new EncryptUtility();
         PersonaRepository personaRepository = new PersonaRepository();
         PersonaDto personaResp = new PersonaDto();
-
+        persona.nombres = reemplazar.Seguridad(persona.nombres);
+        persona.apellidos = reemplazar.Seguridad(persona.apellidos);
+        persona.documento = reemplazar.Seguridad(persona.documento);
+        persona.correo = reemplazar.Seguridad(persona.correo);
         string contrasenaEncript = encrypt.encriptarSHA512(contrasena);
         personaResp = personaRepository.IniciarSesion(persona.correo, contrasenaEncript);
 
@@ -65,13 +69,16 @@ public class PersonaService
 
     public int actualizarContrasena(string correo, string codigo, string contrasena) 
     {
+        SqlInyectionUtility reemplazar = new SqlInyectionUtility();
         int m = 0;
         PersonaRepository personaRepository = new PersonaRepository();
         PersonaDto personaDto = new PersonaDto();   
         CodigoDto codigo1 = new CodigoDto();
         EncryptUtility encrypt = new EncryptUtility();    
         CodigoRepository codigoRepository = new CodigoRepository();
-
+        correo = reemplazar.Seguridad(correo);
+        codigo = reemplazar.Seguridad(codigo);
+        contrasena = reemplazar.Seguridad(contrasena);
         personaDto = personaRepository.SeleccionarPersona(correo);
        codigo1= codigoRepository.SeleccionarCodigo(personaDto.id_persona);
         if (codigo == codigo1.codigo)

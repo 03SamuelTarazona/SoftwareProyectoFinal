@@ -141,6 +141,7 @@
     <Compile Include="Utilitys\CorreoUtility.cs" />
     <Compile Include="Utilitys\EncryptUtility.cs" />
     <Compile Include="Utilitys\ReportesUtility.cs" />
+    <Compile Include="Utilitys\SqlInyectionUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

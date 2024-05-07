@@ -16,7 +16,6 @@ namespace Software_Proyecto.Dto
         public string contrasena { get; set; }
         public string genero { get; set; }
         public string fecha_nacimiento { get; set; }
-        public int estado { get; set; }
         public int respuesta { get; set; }
         public string mensaje { get; set; }
     }

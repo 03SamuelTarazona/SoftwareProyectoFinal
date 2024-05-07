@@ -163,23 +163,33 @@ public class PacienteRepository
     }
     public int EliminarPaciente(int id_persona)
     {
-        int resultado = 0; 
+        int resultado = 0;
 
         ConexionBDUtility conexion = new ConexionBDUtility();
-        conexion.Connect(); 
+        conexion.Connect();
 
-        string sql = "DELETE FROM dbo.Persona WHERE id_persona = @id_persona"; 
+        
+        string sqlAgenda = "DELETE FROM dbo.Agenda WHERE id_persona = @id_persona";
 
-        using (SqlCommand command = new SqlCommand(sql, conexion.Conexion()))
+        using (SqlCommand command = new SqlCommand(sqlAgenda, conexion.Conexion()))
         {
-            command.Parameters.AddWithValue("@id_persona", id_persona); 
-
-            resultado = command.ExecuteNonQuery(); 
+            command.Parameters.AddWithValue("@id_persona", id_persona);
+            command.ExecuteNonQuery(); 
         }
 
-        conexion.Disconnect(); 
+       
+        string sqlPersona = "DELETE FROM dbo.Persona WHERE id_persona = @id_persona";
 
-        return resultado; 
+        using (SqlCommand command = new SqlCommand(sqlPersona, conexion.Conexion()))
+        {
+            command.Parameters.AddWithValue("@id_persona", id_persona);
+            resultado = command.ExecuteNonQuery();
+        }
+
+        conexion.Disconnect();
+
+        return resultado;
     }
+
 
 }

@@ -10,6 +10,8 @@ public class PersonaRepository
 {
     public bool buscarPersona(string correo)
     {
+        SqlInyectionUtility reemplazar = new SqlInyectionUtility(); 
+        correo = reemplazar.Seguridad(correo);
         ConexionBDUtility conexion = new ConexionBDUtility();
         conexion.Connect();
         string SQL = "SELECT COUNT(*) FROM dbo.Persona WHERE correo = @correo";
@@ -33,10 +35,12 @@ public class PersonaRepository
 
     public PersonaDto IniciarSesion(string correo, string contrasenaIngresada)
     {
+        SqlInyectionUtility reemplazar = new SqlInyectionUtility();
         ConexionBDUtility conexion = new ConexionBDUtility();
         PersonaDto persona = null;
         PersonaDto personaResp = new PersonaDto();
-
+        correo = reemplazar.Seguridad(correo);
+        contrasenaIngresada = reemplazar.Seguridad(contrasenaIngresada);
         try
         {
             conexion.Connect();
@@ -106,8 +110,11 @@ public class PersonaRepository
     }
     public int ActualizarContrasena(string correo, string contrasena)
     {
+        SqlInyectionUtility reemplazar = new SqlInyectionUtility();
         int comando = 0;
         ConexionBDUtility conexion = new ConexionBDUtility();
+        correo = reemplazar.Seguridad(correo);
+        contrasena = reemplazar.Seguridad(contrasena);
         try
         {
 

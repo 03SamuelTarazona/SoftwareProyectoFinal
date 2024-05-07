@@ -1,4 +1,5 @@
 ﻿using Software_Proyecto.Dto;
+using Software_Proyecto.Utilitys;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,11 +12,15 @@ namespace Software_Proyecto.Services
     {
         public MedicoDto registrarMedico(MedicoDto medico)
         {
+            SqlInyectionUtility reemplazar = new SqlInyectionUtility();
             MedicoDto medico1 = new MedicoDto();    
            MedicoRepository medicoRepository = new MedicoRepository();
                 medico.persona.id_rol = 2;
             
-
+            medico.persona.nombres = reemplazar.Seguridad(medico.persona.nombres);
+            medico.persona.apellidos = reemplazar.Seguridad(medico.persona.apellidos);
+            medico.persona.documento = reemplazar.Seguridad(medico.persona.documento);
+            medico.persona.correo = reemplazar.Seguridad(medico.persona.correo);
                 EncryptUtility encrypt = new EncryptUtility();            
                 medico.persona.contrasena = encrypt.encriptarSHA512(medico.persona.contrasena);
                 int res = medicoRepository.registroMedico(medico);
