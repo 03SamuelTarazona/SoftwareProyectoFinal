@@ -52,9 +52,11 @@ public class PacienteService
         PersonaRepository personaRepository = new PersonaRepository();
         PersonaDto persona = new PersonaDto();
         persona = personaRepository.SeleccionarPersona(correo);
-
+        CorreoUtility correoUtility = new CorreoUtility();
+        string nombre = persona.nombres;
         int id = persona.id_persona;
-        pacienteRepository.registroCita(id,agenda);
+        pacienteRepository.registroCita(id, agenda);
+        correoUtility.enviarCorreoCita(correo, nombre);
         return agenda;
     }
     public PacienteDto mapeo(PersonaDto pers)
@@ -73,5 +75,18 @@ public class PacienteService
         paciente.persona.mensaje = pers.mensaje;
 
         return paciente;
+    }
+    public List<AgendaDto> Historial(int id_persona)
+    {
+        PacienteRepository pacienteRepository = new PacienteRepository();
+        var Lista = pacienteRepository.MostrarCitas(id_persona);
+        return Lista;
+    }
+    public int Eliminar(int id_persona)
+    {
+        int c = 0;
+        PacienteRepository pacienteRepository = new PacienteRepository();
+        pacienteRepository.EliminarPaciente(id_persona);
+        return c;
     }
 }

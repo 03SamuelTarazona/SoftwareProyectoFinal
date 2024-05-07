@@ -1,0 +1,44 @@
+﻿@{ ViewBag.Title = "Historial";
+}
+@{
+    var agendas = ViewData["agenda"] as List<Software_Proyecto.Dto.AgendaDto>;
+    
+        var user = Session["UserLogged"] as Software_Proyecto.Dto.PersonaDto;
+   
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListaMedicos</title>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+
+                
+                <th>Fecha</th>
+                <th>Hora Inicio</th>
+                <th>Hora Fin</th>
+                <th>Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var agenda in agendas)
+            {
+                <tr>
+                    
+                    <td>@agenda.fecha</td>
+                    <td>@agenda.hora_inicio</td>
+                    <td>@agenda.hora_fin</td>
+                    <td>@agenda.descripcion</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

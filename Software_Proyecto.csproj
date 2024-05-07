@@ -180,6 +180,8 @@
     <Content Include="Views\Home\ReservarCita.cshtml" />
     <Content Include="Views\Home\MostrarCitas.cshtml" />
     <Content Include="Views\Home\DetallesForm.cshtml" />
+    <Content Include="Views\Home\Historial.cshtml" />
+    <Content Include="Views\Home\Perfil.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

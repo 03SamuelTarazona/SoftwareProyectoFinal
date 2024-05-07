@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 
 
 
@@ -85,13 +86,13 @@ namespace Software_Proyecto.Controllers
         public ActionResult IniciarSesion(PersonaDto persona, string contrasena)
         {
             PersonaService personaService = new PersonaService();
-         
+
 
             PersonaDto personalogueo = personaService.iniciarSesion(persona, contrasena);
 
             if (personalogueo.id_rol == 1)
             {
-                
+
                 if (personalogueo.respuesta != 0)
                 {
                     Session["UserLogged"] = personalogueo;
@@ -211,26 +212,28 @@ namespace Software_Proyecto.Controllers
         public ActionResult ReservarCita()
         {
             PersonaDto personaLogueo = Session["UserLogged"] as PersonaDto;
-            if (personaLogueo == null) 
+            if (personaLogueo == null)
             {
                 return View("Error");
             }
 
-            ViewBag.PersonaLogueo = personaLogueo; 
+            ViewBag.PersonaLogueo = personaLogueo;
             return View("ReservarCita");
         }
 
         [HttpPost]
-        public ActionResult ReservarCita(string correo,AgendaDto agenda)
+        public ActionResult ReservarCita(string correo, AgendaDto agenda)
         {
-            PacienteService pacienteService = new PacienteService();    
+
+            PacienteService pacienteService = new PacienteService();
+
             pacienteService.ReservarCita(correo, agenda);
-            
+
             return View();
         }
-        public ActionResult  MostrarCitas()
+        public ActionResult MostrarCitas()
         {
-            MedicoService mediicoService = new MedicoService(); 
+            MedicoService mediicoService = new MedicoService();
             List<AgendaDto> agenda = mediicoService.Lista_Citas();
             ViewData["agenda"] = agenda;
             return View("MostrarCitas");
@@ -261,7 +264,7 @@ namespace Software_Proyecto.Controllers
         {
             try
             {
-               MedicoService medicoService=new MedicoService(); 
+                MedicoService medicoService = new MedicoService();
 
                 string tempFilePath = Path.Combine(Path.GetTempPath(), "Historial.pdf");
                 medicoService.CrearPdfHistorial();
@@ -285,6 +288,26 @@ namespace Software_Proyecto.Controllers
                 ViewData["Mensaje"] = "Error al generar el PDF: " + ex.Message;
                 return RedirectToAction("MostrarCitas");
             }
+        }
+        public ActionResult Historial()
+        {
+            PacienteService pacienteService = new PacienteService();
+            PersonaDto personaAux = new PersonaDto();
+            personaAux = (PersonaDto)Session["UserLogged"];
+            List<AgendaDto> agenda = pacienteService.Historial(personaAux.id_persona);
+            ViewData["agenda"] = agenda;
+            return View();
+        }
+        public ActionResult Perfil()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult EliminarPaciente(int id_persona)
+        {
+            PacienteService pacienteService = new PacienteService();
+            pacienteService.Eliminar(id_persona);
+            return View("Index");
         }
     }
 }

@@ -129,5 +129,57 @@ public class PacienteRepository
         conexion.Disconnect();
         return pacientes;
     }
+    public List<AgendaDto> MostrarCitas(int id_persona)
+    {
+
+        ConexionBDUtility conexion = new ConexionBDUtility();
+        List<AgendaDto> agenda1 = new List<AgendaDto>();
+        conexion.Connect();
+
+        string SQL = "SELECT  id_agenda, fecha, hora_inicio ,hora_fin,descripcion FROM dbo.Agenda WHERE estado='Revisado' AND id_persona=@id_persona";
+        using (SqlCommand command = new SqlCommand(SQL, conexion.Conexion()))
+        {
+            command.Parameters.AddWithValue("@id_persona", id_persona);
+
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    AgendaDto agenda = new AgendaDto
+                    {
+                        id_agenda = Convert.ToInt32(reader["id_agenda"]),
+                        fecha = Convert.ToDateTime(reader["fecha"]),
+                        hora_inicio = TimeSpan.Parse(reader["hora_inicio"].ToString()),
+                        hora_fin = TimeSpan.Parse(reader["hora_fin"].ToString()),
+                        descripcion = reader["descripcion"].ToString()
+                    };
+
+                    agenda1.Add(agenda);
+                }
+            }
+        }
+        conexion.Disconnect();
+        return agenda1;
+    }
+    public int EliminarPaciente(int id_persona)
+    {
+        int resultado = 0; 
+
+        ConexionBDUtility conexion = new ConexionBDUtility();
+        conexion.Connect(); 
+
+        string sql = "DELETE FROM dbo.Persona WHERE id_persona = @id_persona"; 
+
+        using (SqlCommand command = new SqlCommand(sql, conexion.Conexion()))
+        {
+            command.Parameters.AddWithValue("@id_persona", id_persona); 
+
+            resultado = command.ExecuteNonQuery(); 
+        }
+
+        conexion.Disconnect(); 
+
+        return resultado; 
+    }
 
 }

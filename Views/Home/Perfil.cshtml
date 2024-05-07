@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "ReservarCita";
+}
+@{
+    var user = Session["UserLogged"] as Software_Proyecto.Dto.PersonaDto;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Perfil</title>
+</head>
+<body>
+    <div>
+        <p>@user.nombres</p>
+        <p>@user.apellidos</p>
+        <p>@user.correo</p>
+        <p>@user.fecha_nacimiento</p>
+        <p>@user.documento</p>
+        <p>@user.genero</p>
+
+    </div>
+    <button>
+        @using (Html.BeginForm("EliminarPa", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <input type="number" id="id_persona" name="id_persona" value="@user.id_persona" hidden>
+        }  @if (ViewData["Mensaje"] != null)
+        {
+            <p>@ViewData["Mensaje"]</p>
+        }
+    </button>
+</body>
+</html>

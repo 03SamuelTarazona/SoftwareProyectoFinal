@@ -57,7 +57,20 @@ public class CorreoUtility
 
         }
 
-        public string mensajeCon(string codigo)
+    public string enviarCorreoCita(string destinatario,string nombre)
+    {
+
+        CodigoUtility codigoUtility = new CodigoUtility();
+        PersonaDto persona = new PersonaDto();
+
+        String mensajeCorreo = mensajeConN(nombre);
+        EnviarCorreo(destinatario, "Cambiar Contraseña", mensajeCorreo, true);
+        return nombre;
+
+    }
+
+
+    public string mensajeCon(string codigo)
         {
             string mensajeCon = "<html>" +
                 "<head>" +
@@ -82,4 +95,29 @@ public class CorreoUtility
 
             return mensajeCon;
         }
+    public string mensajeConN(string nombre)
+    {
+        string mensajeConN = "<html>" +
+            "<head>" +
+
+            "</head>" +
+            "<body>" +
+
+            "<div class='container'>" +
+            "<div class='header'>" +
+            "<h1>Reserva</h1>" +
+            "</div>" +
+
+            "<div class='content'>" +
+            "<h2>Buen dia" + nombre+"</h2>" +
+            "<p>Esperamos que te ecuentres bien.</p>" +
+            "<p>Este correo responde a una reserva de cita.</p>" +
+          
+            "</body>" +
+            "</html>";
+
+        return mensajeConN;
     }
+}
+
+    
