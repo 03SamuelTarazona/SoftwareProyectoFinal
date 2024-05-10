@@ -33,7 +33,8 @@ body {
 }
 
 .Text1 {
-    margin-left: 15%;
+    background-color: red;
+    margin-left: 10%;
     position: absolute;
     max-width: 490px;
     height: 100px;

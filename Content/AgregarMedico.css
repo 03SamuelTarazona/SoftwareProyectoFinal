@@ -43,7 +43,6 @@ input[type="password"],
 input[type="submit"],
 select,
 textarea {
-    background: red;
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
