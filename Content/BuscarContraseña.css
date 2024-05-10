@@ -6,15 +6,7 @@ header {
     font-weight: 900;
     font-style: italic;
 }
-.container {
-    font-family: "Montserrat";
-    font-weight: 500;
-}
 
-html {
-    position: relative;
-    min-height: 100%;
-}
 
 body {
     margin: 0;
@@ -33,6 +25,8 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    font-family: "Montserrat";
+    font-weight: 500;
 }
 
 h2 {
@@ -41,7 +35,6 @@ h2 {
 }
 
 input[type="email"],
-input[type="password"],
 input[type="submit"] {
     width: calc(100% - 20px);
     padding: 10px;
@@ -55,22 +48,6 @@ input[type="submit"] {
 .input-group {
     margin-bottom: 15px;
 }
-
-.links {
-    margin-top: 20px;
-    text-align: center;
-}
-
-    .links a {
-        color: dimgrey;
-        text-decoration: none;
-        display: inline; /* Añadido para alinear en la misma línea */
-        margin: 0 5px; /* Ajuste de márgenes para separación */
-    }
-
-        .links a:hover {
-            color: dodgerblue; /* Cambiar al color que desees cuando el cursor está sobre el enlace */
-        }
 
 button {
     width: 60%;

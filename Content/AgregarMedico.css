@@ -1,38 +1,24 @@
 ﻿/*Stylo de Letra*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
 
-header {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-}
-.container {
-    font-family: "Montserrat";
-    font-weight: 500;
-}
-
-html {
-    position: relative;
-    min-height: 100%;
-}
-
 body {
     margin: 0;
     padding: 0;
     background-color: dodgerblue;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 165vh;
 }
 
 .container {
-    max-width: 500px;
+    max-width: 600px;
     margin: 30px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    font-family: "Montserrat";
+    font-weight: 500;
 }
 
 h2 {
@@ -40,14 +26,29 @@ h2 {
     margin-bottom: 20px;
 }
 
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
 input[type="email"],
+input[type="tel"],
 input[type="password"],
-input[type="submit"] {
-    width: calc(100% - 20px);
+input[type="submit"],
+select,
+textarea {
+    background: red;
+    width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box; /* incluir el relleno y el borde en el tamaño total */
     font-family: "Montserrat";
     font-weight: 500;
 }
@@ -56,25 +57,12 @@ input[type="submit"] {
     margin-bottom: 15px;
 }
 
-.links {
-    margin-top: 20px;
+.containerbutton {
     text-align: center;
 }
 
-    .links a {
-        color: dimgrey;
-        text-decoration: none;
-        display: inline; /* Añadido para alinear en la misma línea */
-        margin: 0 5px; /* Ajuste de márgenes para separación */
-    }
-
-        .links a:hover {
-            color: dodgerblue; /* Cambiar al color que desees cuando el cursor está sobre el enlace */
-        }
-
 button {
     width: 60%;
-    margin: 0 auto;
     padding: 10px;
     background-color: #4caf50;
     color: #fff;

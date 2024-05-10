@@ -143,11 +143,15 @@
     <Compile Include="Utilitys\ReportesUtility.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\AgregarMedico.css" />
+    <Content Include="Content\BuscarContraseña.css" />
+    <Content Include="Content\CambiarContraseña.css" />
     <Content Include="Content\Img\Logo_Ing_Software_Sin_Fondo.png" />
     <Content Include="Content\Img\MenuDespliegue.png" />
     <Content Include="Content\Img\Usuario.png" />
     <Content Include="Content\Index.css" />
     <Content Include="Content\InicioSesion.css" />
+    <Content Include="Content\RegistroPaciente.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />

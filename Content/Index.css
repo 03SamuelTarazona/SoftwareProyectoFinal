@@ -12,8 +12,10 @@ html {
     position: relative;
     min-height: 100%;
 }
+
 body {
 }
+
 .img0 {
     width: 120px;
     height: 120px;
@@ -27,28 +29,28 @@ body {
 .img2 {
     width: 40px;
     height: 40px;
-    margin-top:  100%;
+    margin-top: 0%;
 }
 
 .Text1 {
-    color: white;
-    margin-left: 10%;
-    background: red;
-    max-width: 490px;
+    margin-left: 15%;
     position: absolute;
-    font-size: 40px;
+    max-width: 490px;
+    height: 100px;
     padding: 20px 0px;
     border-radius: 3px;
-    
+    font-size: 35px;
 }
+
 /*variables globales */
-* {
+    * {
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-}
+    }
+
 /*Menu*/
 nav {
     background: dodgerblue;
@@ -57,15 +59,18 @@ nav {
     border: 1px solid black; /* Solo para visualización */
 
 }
+
 /*Logo*/
 .enlace{
     position: absolute;
     padding: 40px 50px;
 }
+
 /*Logo*/
 .logo {
     height: 50px;
 }
+
 /*Alineacion Items*/
 nav ul {
     float: right;
@@ -75,22 +80,28 @@ nav ul {
 /*Éspacio Items*/
     nav ul li {
         display: inline-block;
-        line-height: 130px;/*Centrar*/
-        margin: 0 15px;
+        line-height: 130px; /*Centrar*/
+        margin: 0 15px; /*Espacio entre Items*/
     }
+
     /*Items*/
     nav ul li a{
         color: black; 
-        font-size: 18px;
-        padding: 25px 13px; 
+        padding: 20px 13px; 
         border-radius: 10px;
         text-transform: uppercase;/*MAYUSCULA*/
     }
+
     /*Transicion*/
     li a.active, li a:hover {
-    background: #fff;
+    background: white;
     transition: .5s;
-}
+    }
+
+    .LiImg1 {
+  
+   
+    }
 
 /*Despliege*/
 .checkbtn {
@@ -122,6 +133,15 @@ section {
 
     nav ul li a {
         font-size: 16px;
+    }
+
+    /* Centrar el título en pantallas más pequeñas */
+    .Text1 {
+        left: calc(50% + 30px); /* Coloca el borde izquierdo del elemento un poco más a la derecha del centro del contenedor padre */
+        transform: translateX(-50%); /* Mantiene el elemento centrado horizontalmente */
+        text-align: center; /* Alinea el texto dentro del contenedor en el centro */
+        margin-left: 500px; /* Elimina cualquier margen izquierdo para asegurar que el título esté completamente centrado */
+    
     }
 }
 @media (max-width: 858px) {

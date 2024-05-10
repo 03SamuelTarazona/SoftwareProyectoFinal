@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "CambiarContrasena";
+    ViewBag.Title = "Cambiar Contrasena";
 }
 @{ 
     var correo = ViewData["correo"];
@@ -10,34 +10,33 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gola</title>
+    <title>Cambio de Contraseña</title>
+    <link href="~/Content/CambiarContraseña.css" rel="stylesheet" />
 </head>
 <body>
-    
-        @using (Html.BeginForm("CambiarContrasena", "Home", FormMethod.Post))
-        {
-            @Html.AntiForgeryToken()
 
-          <input type="hidden" name="correo" value=@correo>
+    @using (Html.BeginForm("CambiarContrasena", "Home", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
 
-            <div>
-                <label for="codigo">Código:</label>
-                <input type="text" id="codigo" name="codigo" required />
-            </div>
+    <div class="container">
+        <h2>Cambiar Contraseña</h2>
+        <input type="hidden" name="correo" value=@correo>
 
-            <div>
-                <label for="contrasena">Contraseña:</label>
-                <input type="password" id="contrasena" name="contrasena" required />
-            </div>
+        <div class="inputbox">
+            <input type="text" id="codigo" name="codigo" placeholder="Codigo" required />
+        </div>
 
-            <div>
-                <button type="submit">Cambiar Contraseña</button>
-            </div>
+        <div class="inputbox">
+            <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required />
+        </div>
 
-        
-    }  @if (ViewData["Mensaje"] != null)
-        {
-            <p>@ViewData["Mensaje"]</p>
-        }
-</body>
+        <button type="submit">Cambiar Contraseña</button>
+    </div>
+
+            }  @if (ViewData["Mensaje"] != null)
+            {
+                <p>@ViewData["Mensaje"]</p>
+            }
+    </body>
 </html>

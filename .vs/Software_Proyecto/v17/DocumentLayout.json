@@ -3,32 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\user\\source\\repos\\proyecto final software\\proyectofinaldesoftware\\content\\registropaciente.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:content\\registropaciente.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\user\\source\\repos\\proyecto final software\\proyectofinaldesoftware\\content\\iniciosesion.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:content\\iniciosesion.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\user\\source\\repos\\proyecto final software\\proyectofinaldesoftware\\content\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:content\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\user\\source\\repos\\proyecto final software\\proyectofinaldesoftware\\content\\cambiarcontrase\u00F1a.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:content\\cambiarcontrase\u00F1a.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\user\\source\\repos\\proyecto final software\\proyectofinaldesoftware\\content\\buscarcontrase\u00F1a.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:content\\buscarcontrase\u00F1a.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\user\\source\\repos\\proyecto final software\\proyectofinaldesoftware\\content\\agregarmedico.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:content\\agregarmedico.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\user\\source\\repos\\proyecto final software\\proyectofinaldesoftware\\views\\home\\reservarcita.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\reservarcita.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\user\\source\\repos\\proyecto final software\\proyectofinaldesoftware\\views\\home\\registropaciente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\registropaciente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\user\\source\\repos\\proyecto final software\\proyectofinaldesoftware\\views\\home\\iniciarsesion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\iniciarsesion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\user\\source\\repos\\proyecto final software\\proyectofinaldesoftware\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\user\\source\\repos\\proyecto final software\\proyectofinaldesoftware\\views\\home\\cambiarcontrasena.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\cambiarcontrasena.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\views\\home\\mostrarcitas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\mostrarcitas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\user\\source\\repos\\proyecto final software\\proyectofinaldesoftware\\views\\home\\buscarcorreo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\buscarcorreo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\services\\medicoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:services\\medicoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\repository\\medicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:repository\\medicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\user\\source\\repos\\proyecto final software\\proyectofinaldesoftware\\views\\home\\agregarmedico.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\agregarmedico.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,116 +62,178 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABQAAAAOAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-06T01:36:00.934Z",
+              "WhenOpened": "2024-05-10T00:26:01.093Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.css",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Content\\Index.css",
+              "RelativeDocumentMoniker": "Content\\Index.css",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Content\\Index.css",
+              "RelativeToolTip": "Content\\Index.css",
+              "ViewState": "AQIAAJcAAAAAAAAAAAAAALQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-05-10T00:26:03.228Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.css",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Content\\Index.css",
-              "RelativeDocumentMoniker": "Content\\Index.css",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Content\\Index.css",
-              "RelativeToolTip": "Content\\Index.css",
-              "ViewState": "AQIAABcAAAAAAAAAAAAAwCkAAAAEAAAA",
+              "Title": "RegistroPaciente.css",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Content\\RegistroPaciente.css",
+              "RelativeDocumentMoniker": "Content\\RegistroPaciente.css",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Content\\RegistroPaciente.css",
+              "RelativeToolTip": "Content\\RegistroPaciente.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-07T00:36:17.123Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-05-10T01:05:41.883Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Site.css",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Content\\Site.css",
-              "RelativeDocumentMoniker": "Content\\Site.css",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Content\\Site.css",
-              "RelativeToolTip": "Content\\Site.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "InicioSesion.css",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Content\\InicioSesion.css",
+              "RelativeDocumentMoniker": "Content\\InicioSesion.css",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Content\\InicioSesion.css",
+              "RelativeToolTip": "Content\\InicioSesion.css",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAAAFoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-07T00:34:58.238Z",
+              "WhenOpened": "2024-05-10T01:05:26.546Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MostrarCitas.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Views\\Home\\MostrarCitas.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\MostrarCitas.cshtml",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Views\\Home\\MostrarCitas.cshtml",
-              "RelativeToolTip": "Views\\Home\\MostrarCitas.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAEIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-06T00:14:11.366Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MedicoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Repository\\MedicoRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\MedicoRepository.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Repository\\MedicoRepository.cs",
-              "RelativeToolTip": "Repository\\MedicoRepository.cs",
-              "ViewState": "AQIAAL4AAAAAAAAAAAAmwNUAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T23:19:24.801Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MedicoService.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Services\\MedicoService.cs",
-              "RelativeDocumentMoniker": "Services\\MedicoService.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Services\\MedicoService.cs",
-              "RelativeToolTip": "Services\\MedicoService.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAiwDAAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T23:13:42.421Z"
+              "Title": "CambiarContrase\u00F1a.css",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Content\\CambiarContrase\u00F1a.css",
+              "RelativeDocumentMoniker": "Content\\CambiarContrase\u00F1a.css",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Content\\CambiarContrase\u00F1a.css",
+              "RelativeToolTip": "Content\\CambiarContrase\u00F1a.css",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAAAEYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-05-10T01:04:51.55Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAP8AAAAAAAAAAAAiwCEBAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T23:12:41.39Z"
+              "Title": "BuscarContrase\u00F1a.css",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Content\\BuscarContrase\u00F1a.css",
+              "RelativeDocumentMoniker": "Content\\BuscarContrase\u00F1a.css",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Content\\BuscarContrase\u00F1a.css",
+              "RelativeToolTip": "Content\\BuscarContrase\u00F1a.css",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAEMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-05-10T01:04:40.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AgregarMedico.css",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Content\\AgregarMedico.css",
+              "RelativeDocumentMoniker": "Content\\AgregarMedico.css",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Content\\AgregarMedico.css",
+              "RelativeToolTip": "Content\\AgregarMedico.css",
+              "ViewState": "AQIAADoAAAAAAAAAAAAQwE4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-05-10T01:04:05.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ReservarCita.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Views\\Home\\ReservarCita.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\ReservarCita.cshtml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Views\\Home\\ReservarCita.cshtml",
+              "RelativeToolTip": "Views\\Home\\ReservarCita.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAQwDIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-10T01:00:19.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RegistroPaciente.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Views\\Home\\RegistroPaciente.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\RegistroPaciente.cshtml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Views\\Home\\RegistroPaciente.cshtml",
+              "RelativeToolTip": "Views\\Home\\RegistroPaciente.cshtml",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAQwF4AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-10T00:59:26.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IniciarSesion.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Views\\Home\\IniciarSesion.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\IniciarSesion.cshtml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Views\\Home\\IniciarSesion.cshtml",
+              "RelativeToolTip": "Views\\Home\\IniciarSesion.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-10T00:58:56.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CambiarContrasena.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Views\\Home\\CambiarContrasena.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\CambiarContrasena.cshtml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Views\\Home\\CambiarContrasena.cshtml",
+              "RelativeToolTip": "Views\\Home\\CambiarContrasena.cshtml",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAACoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-10T00:58:12.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BuscarCorreo.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Views\\Home\\BuscarCorreo.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\BuscarCorreo.cshtml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Views\\Home\\BuscarCorreo.cshtml",
+              "RelativeToolTip": "Views\\Home\\BuscarCorreo.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACQAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-10T00:57:18.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AgregarMedico.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Views\\Home\\AgregarMedico.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\AgregarMedico.cshtml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\Proyecto Final Software\\ProyectoFinalDeSoftware\\Views\\Home\\AgregarMedico.cshtml",
+              "RelativeToolTip": "Views\\Home\\AgregarMedico.cshtml",
+              "ViewState": "AQIAADUAAAAAAAAAAAAAAFQAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-10T00:56:49.492Z",
+              "EditorCaption": ""
             }
           ]
         }
