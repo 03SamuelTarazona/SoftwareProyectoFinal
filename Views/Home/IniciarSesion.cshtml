@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "IniciarSesion";
+    ViewBag.Title = "Iniciar Sesion";
 }
 <!DOCTYPE html>
 
@@ -7,37 +7,46 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>IniciarSesion</title>
+    <link href="~/Content/InicioSesion.css" rel="stylesheet" />
 </head>
 <body>
+    <header>
 
 
-    @using (Html.BeginForm("IniciarSesion", "Home", FormMethod.Post))
-    {
-        @Html.AntiForgeryToken()
-        <div class="container">
-            <h2>Iniciar Sesion</h2>
-            <div class="inputbox">
-                <ion-icon name="mail-outlane"></ion-icon>
-                <input type="email" id="correo" name="correo" placeholder="Nombre de Usuario" required>
-                <!-- <label for="correo">Correo</label> -->
+        @using (Html.BeginForm("IniciarSesion", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="container">
+                <h2>Iniciar Sesion</h2>
+
+                <div class="inputbox">
+                    <ion-icon name="mail-outlane"></ion-icon>
+                    <input type="email" id="correo" name="correo" placeholder="Nombre de Usuario" required>
+                    <!-- <label for="correo">Correo</label> -->
+
+                </div>
+
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+                    <!-- <label for="contrasena">Contraseña</label> -->
+
+                </div>
+
+                <button type="submit">Iniciar Sesion</button>
+
+                <div class="links">
+                    <a asp-area="" asp-controller="Home" asp-action="CrearCuenta">Crear Cuenta</a> | <a asp-area="" asp-controller="Home" asp-action="RecuperarCuenta">Recuperar Cuenta</a>
+                </div>
 
             </div>
-            <div class="inputbox">
-                <ion-icon name="lock-closed-outline"></ion-icon>
-                <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
-                <!-- <label for="contrasena">Contraseña</label> -->
 
-            </div>
-            <button type="submit">Iniciar Sesion</button>
-            <div class="links">
-                <a asp-area="" asp-controller="Home" asp-action="CrearCuenta">Crear Cuenta</a> | <a asp-area="" asp-controller="Home" asp-action="RecuperarCuenta">Recuperar Cuenta</a>
-            </div>
-        </div>
-    }  @if (ViewData["Mensaje"] != null)
-    {
-        <p>@ViewData["Mensaje"]</p>
-    }
-
+        }  @if (ViewData["Mensaje"] != null)
+        {
+            <p>@ViewData["Mensaje"]</p>
+        }
+    </header>
 </body>
 
 </html>
