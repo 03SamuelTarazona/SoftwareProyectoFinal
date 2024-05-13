@@ -298,6 +298,7 @@ namespace Software_Proyecto.Controllers
             ViewData["agenda"] = agenda;
             return View();
         }
+
         public ActionResult Perfil()
         {
             return View();

@@ -1,22 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\",
+  "WorkspaceRootPath": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\views\\home\\reservarcita.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\reservarcita.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\onedrive\\documentos\\visual studio y vsc\\visual studio\\clonacion prueba final\\proyectofinaldesoftware\\utilitys\\correoutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:utilitys\\correoutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|c:\\users\\samue\\onedrive\\documentos\\visual studio y vsc\\visual studio\\software_proyecto\\proyectofinaldesoftware\\content\\reservarcita.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:content\\reservarcita.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\views\\home\\vistapaciente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\vistapaciente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\content\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:content\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\views\\home\\iniciarsesion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\iniciarsesion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\views\\home\\perfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\perfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\views\\home\\detallesform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:views\\home\\detallesform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619A12A5-62F4-4F50-AEBD-A490192C2D2A}|Software_Proyecto.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,65 +34,80 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T15:21:30.833Z"
+              "DocumentIndex": 0,
+              "Title": "CorreoUtility.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\Utilitys\\CorreoUtility.cs",
+              "RelativeDocumentMoniker": "Utilitys\\CorreoUtility.cs",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\Utilitys\\CorreoUtility.cs",
+              "RelativeToolTip": "Utilitys\\CorreoUtility.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAowGEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T05:34:52.567Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ReservarCita.css",
-              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Content\\ReservarCita.css",
-              "RelativeDocumentMoniker": "Content\\ReservarCita.css",
-              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Content\\ReservarCita.css",
-              "RelativeToolTip": "Content\\ReservarCita.css",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAAACsAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-10T14:18:47.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ReservarCita.cshtml",
-              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Views\\Home\\ReservarCita.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\ReservarCita.cshtml",
-              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Views\\Home\\ReservarCita.cshtml",
-              "RelativeToolTip": "Views\\Home\\ReservarCita.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACIAAAAzAAAA",
+              "Title": "VistaPaciente.cshtml",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\Views\\Home\\VistaPaciente.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\VistaPaciente.cshtml",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\Views\\Home\\VistaPaciente.cshtml",
+              "RelativeToolTip": "Views\\Home\\VistaPaciente.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T14:12:30.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "WhenOpened": "2024-05-12T05:33:35.232Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.css",
-              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Content\\Index.css",
-              "RelativeDocumentMoniker": "Content\\Index.css",
-              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Software_Proyecto\\ProyectoFinalDeSoftware\\Content\\Index.css",
-              "RelativeToolTip": "Content\\Index.css",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAACQAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-10T15:21:37.556Z"
+              "Title": "IniciarSesion.cshtml",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\Views\\Home\\IniciarSesion.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\IniciarSesion.cshtml",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\Views\\Home\\IniciarSesion.cshtml",
+              "RelativeToolTip": "Views\\Home\\IniciarSesion.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-12T04:56:51.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T04:55:48.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DetallesForm.cshtml",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\Views\\Home\\DetallesForm.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\DetallesForm.cshtml",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\Views\\Home\\DetallesForm.cshtml",
+              "RelativeToolTip": "Views\\Home\\DetallesForm.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-12T04:55:43.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Perfil.cshtml",
+              "DocumentMoniker": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\Views\\Home\\Perfil.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Perfil.cshtml",
+              "ToolTip": "C:\\Users\\samue\\OneDrive\\Documentos\\Visual studio y VSC\\Visual Studio\\Clonacion prueba final\\ProyectoFinalDeSoftware\\Views\\Home\\Perfil.cshtml",
+              "RelativeToolTip": "Views\\Home\\Perfil.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-12T04:55:41.755Z"
             }
           ]
         }

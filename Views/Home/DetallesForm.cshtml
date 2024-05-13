@@ -13,7 +13,7 @@
 
     @using (Html.BeginForm("DetallesForm", "Home", FormMethod.Post))
     {
-        @Html.AntiForgeryToken()
+       @Html.AntiForgeryToken()
 
         <input type="hidden" id="id_agenda" name="id_agenda" value="@Model.id_agenda" required>
         <input type="hidden" id="fecha" name="fecha" value="@Model.fecha" required>

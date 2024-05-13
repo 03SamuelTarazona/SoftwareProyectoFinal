@@ -95,6 +95,7 @@ public class CorreoUtility
 
             return mensajeCon;
         }
+
     public string mensajeConN(string nombre)
     {
         string mensajeConN = "<html>" +
