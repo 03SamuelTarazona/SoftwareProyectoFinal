@@ -136,7 +136,7 @@ public class PacienteRepository
         List<AgendaDto> agenda1 = new List<AgendaDto>();
         conexion.Connect();
 
-        string SQL = "SELECT  id_agenda, fecha, hora_inicio ,hora_fin,descripcion FROM dbo.Agenda WHERE estado='Revisado' AND id_persona=@id_persona";
+        string SQL = "SELECT  id_agenda, fecha, hora_inicio ,descripcion ,estado FROM dbo.Agenda WHERE id_persona=@id_persona";
         using (SqlCommand command = new SqlCommand(SQL, conexion.Conexion()))
         {
             command.Parameters.AddWithValue("@id_persona", id_persona);
@@ -150,8 +150,9 @@ public class PacienteRepository
                         id_agenda = Convert.ToInt32(reader["id_agenda"]),
                         fecha = Convert.ToDateTime(reader["fecha"]),
                         hora_inicio = TimeSpan.Parse(reader["hora_inicio"].ToString()),
-                        hora_fin = TimeSpan.Parse(reader["hora_fin"].ToString()),
-                        descripcion = reader["descripcion"].ToString()
+                     
+                        descripcion = reader["descripcion"].ToString(),
+                        estado = reader["estado"].ToString()
                     };
 
                     agenda1.Add(agenda);

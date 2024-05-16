@@ -107,6 +107,14 @@ public class PersonaService
 
         return paciente;
     }
+   public PersonaDto traerDatos(int id_persona)
+    {
+        PersonaRepository personaRepository = new PersonaRepository();
+        PersonaDto persona = new PersonaDto();
+
+        persona = personaRepository.TraerDatos(id_persona);
+        return persona;
+    }
 
 }
 

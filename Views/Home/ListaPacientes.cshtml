@@ -37,10 +37,18 @@ else
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ListaMedicos</title>
-    <link href="~/Content/ListaPaciente.css" rel="stylesheet" />
+    <link href="~/Content/ListaMedicos.css" rel="stylesheet" />
 </head>
-<body>
 
+<body>
+    <header class="encabezado">
+        
+        <ul>
+            <li>@Html.ActionLink("Medicos", "ListaMedicos", "Home")</li>
+            
+            <li>@Html.ActionLink("Cerrar Sesion", "CerrarSesion", "Home")</li>
+        </ul>
+    </header>
     <div class="container">
         <h2>Lista de Pacientes</h2>
         <table>
@@ -78,6 +86,9 @@ else
         </div>
 
     </div>
+    
+
+
 
 </body>
 </html>

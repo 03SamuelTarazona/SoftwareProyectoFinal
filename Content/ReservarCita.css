@@ -11,14 +11,10 @@ body {
 }
 
 .container {
-    max-width: 600px;
-    margin: 130px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: "Montserrat";
-    font-weight: 500;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
 }
 
 h2 {
@@ -33,6 +29,7 @@ h2 {
 label {
     display: block;
     font-weight: bold;
+    text-align:center;
 }
 
 input[type="email"],
@@ -41,13 +38,15 @@ input[type="time"],
 input[type="text"],
 input[type="submit"],
 textarea {
-    margin-left: auto;
+    margin-left: 1rem;
     margin-right: auto;
+    text-align:center;
+
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* incluir el relleno y el borde en el tamaño total */
+    box-sizing: border-box; 
     font-family: "Montserrat";
     font-weight: 500;
 }
@@ -77,3 +76,14 @@ button {
     button:hover {
         background-color: #45a049;
     }
+.form {
+    max-width: 400px;
+    padding: 5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+        

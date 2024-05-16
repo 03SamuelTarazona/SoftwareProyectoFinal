@@ -42,58 +42,73 @@ else
 
 </head>
 <body>
+    <header class="encabezado">
 
-    @using (Html.BeginForm("EliminarMedico", "Home", FormMethod.Post))
-    {
-        @Html.AntiForgeryToken()
+        <ul>
+            <li>@Html.ActionLink("Pacientes", "ListaPacientes", "Home")</li>
 
+            <li>@Html.ActionLink("Cerrar Sesion", "CerrarSesion", "Home")</li>
+        </ul>
+    </header>
     <div class="container">
-        <h2>Lista de Medicos</h2>
-
-        <table>
-
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Nombres</th>
-                    <th>Apellidos</th>
-                    <th>Correo</th>
-                    <th>Genero</th>
-                    <th>Especialidad</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                @foreach (var medico in medicos)
-                {
-                    <tr>
-                        <td>
-                            <input type="checkbox" name="id_persona" id="id_persona" value="@medico.persona.id_persona">
-
-                        </td>
-                        <td>@medico.persona.nombres</td>
-                        <td>@medico.persona.apellidos</td>
-                        <td>@medico.persona.correo</td>
-                        <td>@medico.persona.genero</td>
-                        <td>@medico.especialidad</td>
-                    </tr>
-                }
-            </tbody>
-
-        </table>
-
-        <button type="submit">Eliminar</button>
-
-        @if (ViewData["Mensaje"] != null)
-        {
-            <p>@ViewData["Mensaje"]</p>
-        }
-
         <div>
-            <button onclick="crear()">Agregar</button>
+            @using (Html.BeginForm("EliminarMedico", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+
+                <h2>Lista de Medicos</h2>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Correo</th>
+                            <th>Genero</th>
+                            <th>Especialidad</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var medico in medicos)
+                        {
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="id_persona" id="id_persona" value="@medico.persona.id_persona">
+
+                                </td>
+                                <td>@medico.persona.nombres</td>
+                                <td>@medico.persona.apellidos</td>
+                                <td>@medico.persona.correo</td>
+                                <td>@medico.persona.genero</td>
+                                <td>@medico.especialidad</td>
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+
+                <button type="submit">Eliminar</button>
+
+            }  @if (ViewData["Mensaje"] != null)
+            {
+                <p>@ViewData["Mensaje"]</p>
+            }
+
+
         </div>
 
         <div>
+
+
+            <button onclick="crear()">Agregar</button>
+
+        </div>
+        <div>
+
             @using (Html.BeginForm("DescargarPdfMedicos", "Home", FormMethod.Post))
             {
                 <button type="submit">
@@ -105,16 +120,19 @@ else
             }
         </div>
 
-        <button type="submit">Cerrar Sesion</button>
+
+
+
+
 
     </div>
-
-        <script>
+    <script>
     function crear() {
         window.location.href = '@Url.Action("AgregarMedico", "Home")';
     }
-        </script>
-    }
+    </script>
+
+
 
 </body>
 </html>

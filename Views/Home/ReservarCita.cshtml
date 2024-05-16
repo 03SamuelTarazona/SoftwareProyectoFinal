@@ -39,44 +39,54 @@ else
     <link href="~/Content/ReservarCita.css" rel="stylesheet" />
 </head>
 <body>
+    <div class="container">
+        <div class="form">
+            @using (Html.BeginForm("ReservarCita", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
 
-    @using (Html.BeginForm("ReservarCita", "Home", FormMethod.Post))
-    {
-        @Html.AntiForgeryToken()
 
-        <div class="container">
-            <h2>Agendamiento de Cita</h2>
+                <h2>Agendamiento de Cita</h2>
 
-            <div>
-                <label>Correo</label>
-                <input type="email" id="correo" name="correo" value="@user.correo" required>
-            </div>
+                <div>
+                    <label>Correo</label>
+                    <input type="email" id="correo" name="correo" value="@user.correo" readonly  required>
+                </div>
 
-            <div>
-                <label for="fecha">Fecha</label>
-                <input type="date" id="fecha" name="fecha" required>
-            </div>
+                <div>
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
 
-            <div>
-                <label for="hora_inicio">Hora de Inicio</label>
-                <input type="time" id="hora_inicio" name="hora_inicio" required>
-            </div>
+                <div>
+                    <label for="hora_inicio">Hora de Inicio</label>
+                    <input type="time" id="hora_inicio" name="hora_inicio" required>
+                </div>
 
-            <div>
-                <input type="text" id="estado" name="estado" value="Reservado" hidden>
-            </div>
+                <div>
+                    <input type="text" id="estado" name="estado" value="Reservado" hidden>
+                </div>
+
+                <div class="containerbutton">
+                    <button type="submit">Agendar</button>
+                </div>
+            }
+            @if (ViewData["Mensaje"] != null)
+            {
+                <p>@ViewData["Mensaje"]</p>
+            }
 
             <div class="containerbutton">
-                <button type="submit">Agendar</button>
+                <button onclick="retr()">Cancelar</button>
             </div>
-
         </div>
-
-    }  @if (ViewData["Mensaje"] != null)
-    {
-        <p>@ViewData["Mensaje"]</p>
-    }
-
+    </div>
+    <script>
+        function retr() {
+            window.location.href = '@Url.Action("VistaPaciente", "Home")';
+        }
+    </script>
 </body>
 </html>
+
 }

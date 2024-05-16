@@ -1,0 +1,77 @@
+﻿@{
+    Layout = null;
+}
+
+
+@{
+    // Recuperar el valor de la variable de sesión
+    Software_Proyecto.Dto.PersonaDto usuario = Session["UserLogged"] as Software_Proyecto.Dto.PersonaDto;
+}
+
+@if (usuario == null)
+{
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Redirección automática en ASP.NET</title>
+        <script type="text/javascript">
+        window.onload = function () {
+            setTimeout(function () {
+                window.location.href = 'Index';
+            });
+        };
+        </script>
+    </head>
+    <body>
+        <h1>Inicie Sesion primero</h1>
+    </body>
+</html>
+}
+else
+{
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VistaPaciente</title>
+    <link href="~/Content/VistaPaciente.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <h2>Paciente</h2>
+        <button onclick="agendar()" class="btn-cerrar">Agendar Citas</button>
+        <button onclick="h()" class="btn-cerrar">Historico Citas</button>
+
+        <button onclick="perfil()" class="btn-cerrar">Perfil</button>
+        <button class="btn-cerrar" onclick="cs()">Cerrar Sesion</button>
+    </div>
+    <script>
+        function agendar() {
+            window.location.href = '@Url.Action("ReservarCita", "Home")';
+
+        }
+    </script>
+    <script>
+     function h() {
+         window.location.href = '@Url.Action("Historial", "Home")';
+
+     }
+    </script>
+    <script>
+    function cs() {
+        window.location.href = '@Url.Action("CerrarSesion", "Home")';
+    }
+    </script>
+
+
+    <script>
+     function perfil() {
+         window.location.href = '@Url.Action("Perfil", "Home")';
+
+     }
+    </script>
+</body>
+</html>
+}

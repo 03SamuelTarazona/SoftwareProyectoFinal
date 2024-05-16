@@ -1,0 +1,82 @@
+﻿﻿@{
+    Layout = null;
+}
+@{
+    ViewBag.Title = "ReservarCita";
+}
+@{
+    var user = Session["UserLogged"] as Software_Proyecto.Dto.PersonaDto;
+}
+
+@{
+    // Recuperar el valor de la variable de sesión
+    Software_Proyecto.Dto.PersonaDto usuario = Session["UserLogged"] as Software_Proyecto.Dto.PersonaDto;
+}
+
+@if (usuario == null)
+{
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Redirección automática en ASP.NET</title>
+        <script type="text/javascript">
+            window.onload = function () {
+                setTimeout(function () {
+                    window.location.href = 'Index';
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <h1>Inicie Sesion primero</h1>
+    </body>
+</html>
+}
+else
+{
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Perfil</title>
+    <link href="~/Content/Perfil.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <h2>Perfil</h2>
+        <div>
+            <p>@user.nombres</p>
+            <p>@user.apellidos</p>
+            <p>@user.correo</p>
+            <p>@user.fecha_nacimiento</p>
+            <p>@user.documento</p>
+            <p>@user.genero</p>
+        </div>
+        <div>
+            @using (Html.BeginForm("EliminarPaciente", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <input type="number" id="id_persona" name="id_persona" value="@user.id_persona" hidden>
+                <button type="submit">Borrar Perfil</button>
+            }  @if (ViewData["Mensaje"] != null)
+            {
+                <p>@ViewData["Mensaje"]</p>
+            }
+        </div>
+        <div class="containerbutton">
+            <button onclick="retr()">Cancelar</button>
+        </div>
+    </div>
+
+    <script>
+       function retr() {
+           window.location.href = '@Url.Action("VistaPaciente", "Home")';
+       }
+    </script>
+</body>
+</html>
+}

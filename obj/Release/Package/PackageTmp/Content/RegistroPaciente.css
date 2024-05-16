@@ -1,0 +1,74 @@
+﻿/*Stylo de Letra*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: dodgerblue;
+    justify-content: center;
+    align-items: center;
+    height: 160vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 130px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="submit"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* incluir el relleno y el borde en el tamaño total */
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+
+.containerbutton {
+    text-align: center;
+}
+
+button {
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }

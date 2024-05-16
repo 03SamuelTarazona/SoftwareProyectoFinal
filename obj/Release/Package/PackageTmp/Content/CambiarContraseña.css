@@ -1,0 +1,226 @@
+﻿/*Stylo de Letra*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
+
+header {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    color: #fff; /* Color del texto */
+    top: 0; /* Ajusta la posición en la parte superior */
+    width: 100%; /* Ajusta el ancho al 100% del viewport */
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-top: -20px; /* Ajusta el margen superior para compensar el header fijo */
+}
+
+
+/*MENU*/
+.img0 {
+    width: 120px;
+    height: 120px;
+}
+
+.img1 {
+    width: 40px;
+    height: 40px;
+}
+
+.img2 {
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+}
+
+.Text1 {
+    margin-left: 10%;
+    position: absolute;
+    max-width: 490px;
+    height: 100px;
+    padding: 20px 0px;
+    border-radius: 3px;
+    font-size: 45px;
+}
+
+/*variables globales */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/*Menu*/
+nav {
+    background: dodgerblue;
+    height: 140px;
+    width: 100%;
+    border: 1px solid black; /* Solo para visualización */
+}
+
+/*Logo*/
+.enlace {
+    position: absolute;
+    padding: 40px 50px;
+}
+
+/*Logo*/
+.logo {
+    height: 50px;
+}
+
+/*Alineacion Items*/
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+    /*Éspacio Items*/
+    nav ul li {
+        display: inline-block;
+        line-height: 130px; /*Centrar*/
+        margin: 0 15px; /*Espacio entre Items*/
+    }
+
+        /*Items*/
+        nav ul li a {
+            color: black;
+            padding: 27px 20px;
+            border-radius: 10px;
+            text-transform: uppercase; /*MAYUSCULA*/
+        }
+
+/*Transicion*/
+li a.active, li a:hover {
+    background: white;
+    transition: .5s;
+}
+
+/*Despliege*/
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+/*Despliege oculto*/
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    .enlacet {
+        padding-left: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    /* Centrar el título en pantallas más pequeñas */
+    .Text1 {
+        left: calc(50% + 180px); /* Coloca el borde izquierdo del elemento un poco más a la derecha del centro del contenedor padre */
+        transform: translateX(-50%); /* Mantiene el elemento centrado horizontalmente */
+        text-align: center; /* Alinea el texto dentro del contenedor en el centro */
+        margin-left: 500px; /* Elimina cualquier margen izquierdo para asegurar que el título esté completamente centrado */
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        top: 140px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+        nav ul li a {
+            font-size: 20px;
+        }
+
+    li a:hover, li a.active {
+        background: none;
+        color: dodgerblue;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+/*MENU*/
+
+/*Cambio contraseña*/
+.container {
+    max-width: 500px;
+    margin: 130px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+
+h2 {
+    color:black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+button {
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }

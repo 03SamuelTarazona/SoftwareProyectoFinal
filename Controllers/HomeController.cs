@@ -97,7 +97,7 @@ namespace Software_Proyecto.Controllers
                 if (personalogueo.respuesta != 0)
                 {
                     Session["UserLogged"] = personalogueo;
-                    return View("ReservarCita");
+                    return View("VistaPaciente");
 
                 }
             }
@@ -251,6 +251,10 @@ namespace Software_Proyecto.Controllers
         [HttpPost]
         public ActionResult Detalles(AgendaDto agenda)
         {
+           
+            PersonaService personaService = new PersonaService();   
+           var persona=personaService.traerDatos(agenda.id_persona);
+            ViewData["persona"] = persona;
             return View("DetallesForm", agenda);
         }
 
@@ -306,12 +310,21 @@ namespace Software_Proyecto.Controllers
         }
         public ActionResult Historial()
         {
+
             PacienteService pacienteService = new PacienteService();
             PersonaDto personaAux = new PersonaDto();
             personaAux = (PersonaDto)Session["UserLogged"];
-            List<AgendaDto> agenda = pacienteService.Historial(personaAux.id_persona);
-            ViewData["agenda"] = agenda;
-            return View();
+            if (personaAux == null)
+            {
+                return Index();
+            }
+            else
+            {
+             List<AgendaDto> agenda = pacienteService.Historial(personaAux.id_persona);
+                        ViewData["agenda"] = agenda;
+                        return View();
+            }
+           
         }
 
         public ActionResult Perfil()

@@ -4,11 +4,11 @@
 
 
 @{
-    // Recuperar el valor de la variable de sesión
-    Software_Proyecto.Dto.PersonaDto usuario = Session["AdminLogged"] as Software_Proyecto.Dto.PersonaDto;
+    
+    Software_Proyecto.Dto.PersonaDto personalogueo = Session["AdminLogged"] as Software_Proyecto.Dto.PersonaDto;
 }
 
-@if (usuario == null)
+@if (personalogueo == null)
 {
     <!DOCTYPE html>
     <html>
@@ -39,11 +39,13 @@ else
 </head>
 <body>
 
-    @using (Html.BeginForm("AgregarMedico", "Home", FormMethod.Post))
-    {
-        @Html.AntiForgeryToken()
+    <div class="container">
 
-        <div class="container">
+        @using (Html.BeginForm("AgregarMedico", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+
             <h2>Registro del Médico</h2>
 
             <div class="form-group">
@@ -95,20 +97,28 @@ else
                 <button type="submit" onclick="crearCuenta()">Crear</button>
             </div>
 
-        </div>
+    
 
     }  @if (ViewData["Mensaje"] != null)
-    {
-        <p>@ViewData["Mensaje"]</p>
-    }
+        {
+            <p>@ViewData["Mensaje"]</p>
+        }
+    <div class="containerbutton">
 
+        <button  onclick="cancel()">Cancelar</button>
+    </div>
+    </div>
     <script>
         function crearCuenta() {
             window.alert("Cuenta creada con exito");
 
         }
     </script>
-
+    <script>
+        function cancel() {
+           window.location.href = '@Url.Action("ListaMedicos", "Home")';
+        }
+    </script>
 </body>
 </html>
 }

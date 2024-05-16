@@ -1,0 +1,74 @@
+﻿
+button {
+    width: 60%;
+    margin: 20 auto;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: dodgerblue;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.container {
+    max-width: 800px;
+    height: auto; /* Altura automática */
+    margin: 130px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+}
+
+
+th {
+    background-color: #f2f2f2; 
+    padding: 10px; 
+    text-align: left; 
+    border-bottom: 1px solid #ddd; 
+}
+
+td {
+    padding: 10px; /* Espaciado interno de las celdas */
+    text-align: left; /* Alineación del texto a la izquierda */
+    border-bottom: 1px solid #ddd; /* Borde inferior de las celdas */
+}
+
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Color de fondo de las filas impares */
+}
+
+
+

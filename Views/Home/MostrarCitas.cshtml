@@ -40,7 +40,7 @@ else
 </head>
 <body>
 
-    <header>
+    <header class="encabezado">
         <ul>
             <li>@Html.ActionLink("Cerrar Sesion", "CerrarSesion", "Home")</li>
         </ul>
@@ -54,6 +54,7 @@ else
                     <th>ID  Persona</th>
                     <th>Fecha</th>
                     <th>Hora Inicio</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -72,7 +73,7 @@ else
                                 <input type="hidden" name="fecha" value=@agenda.fecha>
                                 <input type="hidden" name="hora_inicio" value=@agenda.hora_inicio>
                                 <input type="hidden" name="estado" value=@agenda.estado>
-                                <button type="submit" onclick="return " class="boton-icono"><img src="~/Scripts/img/usuario (1).png" class="icono" alt="Detalles"></button>
+                                <button type="submit" >Detalles</button>
 
                             }  @if (ViewData["Mensaje"] != null)
                             {

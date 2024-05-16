@@ -5,7 +5,9 @@
 @{
     // Recuperar el valor de la variable de sesión
     Software_Proyecto.Dto.PersonaDto usuario = Session["MedicoLogged"] as Software_Proyecto.Dto.PersonaDto;
+    Software_Proyecto.Dto.PersonaDto paciente = ViewData["persona"] as Software_Proyecto.Dto.PersonaDto;
 }
+
 
 @if (usuario == null)
 {
@@ -37,31 +39,44 @@ else
     <link href="~/Content/DetallesForm.css" rel="stylesheet" />
 </head>
 <body>
+    <div class="container">
+        <div>
+            @using (Html.BeginForm("DetallesForm", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
 
-    @using (Html.BeginForm("DetallesForm", "Home", FormMethod.Post))
-    {
-        @Html.AntiForgeryToken()
 
-        <div class="container">
-            <h2>Detalles</h2>
-            <input type="hidden" id="id_agenda" name="id_agenda" value="@Model.id_agenda" required>
-            <input type="hidden" id="fecha" name="fecha" value="@Model.fecha" required>
-            <input type="hidden" id="id_persona" name="id_persona" value="@Model.id_persona" required>
-            <input type="hidden" id="hora_inicio" name="hora_inicio" value="@Model.hora_inicio" required>
-            <label for="hora_fin">Hora Fin:</label>
-            <input type="time" id="hora_fin" name="hora_fin" value=" " required>
-            <label for="descripcion">Descripcion:</label>
-            <input type="text" id="descripcion" name="descripcion" value=" " required>
+                <h2>Detalles</h2>
+                <input type="hidden" id="id_agenda" name="id_agenda" value="@Model.id_agenda" required>
+                <input type="hidden" id="fecha" name="fecha" value="@Model.fecha" required>
+                <input type="hidden" id="id_persona" name="id_persona" value="@Model.id_persona" required>
+                <input type="hidden" id="hora_inicio" name="hora_inicio" value="@Model.hora_inicio" required>
+                <input type="text" id="nombres" name="nombres" value=@paciente.nombres readonly required>
+                <input type="text" id="apellidos" name="nombres" value=@paciente.apellidos readonly required>
+                <label for="hora_fin">Hora Fin:</label>
+                <input type="time" id="hora_fin" name="hora_fin" value=" " required>
+                <label for="descripcion">Descripcion:</label>
+                <input type="text" id="descripcion" name="descripcion" value=" " required>
 
-            <button type="submit" class="boton-crear" onclick="return crearCuenta()">Actualizar</button>
+                <button type="submit" class="boton-crear" onclick="return crearCuenta()">Actualizar</button>
+
+
+            }  @if (ViewData["Mensaje"] != null)
+            {
+                <p>@ViewData["Mensaje"]</p>
+            }
         </div>
+        <div>
+           
 
-    }  @if (ViewData["Mensaje"] != null)
-    {
-        <p>@ViewData["Mensaje"]</p>
-    }
-
-
+                <button onclick="cancel()">Cancelar</button>
+            </div>
+        </div>
+    <script>
+      function cancel() {
+         window.location.href = '@Url.Action("MostrarCitas", "Home")';
+      }
+    </script>
 </body>
 </html>
 }

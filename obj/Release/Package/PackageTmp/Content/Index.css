@@ -1,0 +1,308 @@
+﻿/*Stylo de Letra*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
+
+header {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    color: #fff; /* Color del texto */
+    top: 0; /* Ajusta la posición en la parte superior */
+    width: 100%; /* Ajusta el ancho al 100% del viewport */
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+}
+/* Otros estilos para .encabezado y ul */
+
+/* Este estilo será aplicado por encima */
+.encabezado {
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 0 1rem;
+    z-index: 100;
+    text-align: right;
+    justify-content: flex-end;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    text-align: right;
+    justify-content: flex-end;
+}
+
+    ul a {
+        margin-left: 1rem;
+        transition: 0.5s;
+        text-decoration: none;
+        margin-right: 2rem;
+        color: white;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background: dodgerblue;
+    margin-top: -20px; /* Ajusta el margen superior para compensar el header fijo */
+}
+
+/*MENU*/
+.img0 {
+    width: 120px;
+    height: 120px;
+}
+
+.img1 {
+    width: 40px;
+    height: 40px;
+}
+
+.img2 {
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+}
+
+.Text1 {
+    margin-left: 10%;
+    position: absolute;
+    max-width: 490px;
+    height: 100px;
+    padding: 20px 0px;
+    border-radius: 3px;
+    font-size: 45px;
+}
+
+/*variables globales */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/*Menu*/
+nav {
+    background: dodgerblue;
+    height: 140px;
+    width: 100%;
+    border: 1px solid black; /* Solo para visualización */
+}
+
+/*Logo*/
+.enlace {
+    position: absolute;
+    padding: 40px 50px;
+}
+
+/*Logo*/
+.logo {
+    height: 50px;
+}
+
+/*Alineacion Items*/
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+    /*Éspacio Items*/
+    nav ul li {
+        display: inline-block;
+        line-height: 130px; /*Centrar*/
+        margin: 0 15px; /*Espacio entre Items*/
+    }
+
+        /*Items*/
+        nav ul li a {
+            color: black;
+            padding: 27px 20px;
+            border-radius: 10px;
+            text-transform: uppercase; /*MAYUSCULA*/
+        }
+
+/*Transicion*/
+li a.active, li a:hover {
+    background: white;
+    transition: .5s;
+}
+
+/*Despliege*/
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+/*Despliege oculto*/
+#check {
+    display: none;
+}
+
+
+/*Fondo*/
+section {
+    background-image: url('img/fondoinicio.jpg');
+    background-position: center center;
+    height: calc(100vh - 155px);
+}
+
+@media (max-width: 952px) {
+    .enlacet {
+        padding-left: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    /* Centrar el título en pantallas más pequeñas */
+    .Text1 {
+        left: calc(50% + 180px); /* Coloca el borde izquierdo del elemento un poco más a la derecha del centro del contenedor padre */
+        transform: translateX(-50%); /* Mantiene el elemento centrado horizontalmente */
+        text-align: center; /* Alinea el texto dentro del contenedor en el centro */
+        margin-left: 500px; /* Elimina cualquier margen izquierdo para asegurar que el título esté completamente centrado */
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        top: 140px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+        nav ul li a {
+            font-size: 20px;
+        }
+
+    li a:hover, li a.active {
+        background: none;
+        color: dodgerblue;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+/*MENU*/
+
+
+/*Informacion del menu*/
+.containertext {
+    margin-top: 0px;
+    background-image: url('../img/panoramica.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center; /* La imagen de fondo se centrará dentro del contenedor */
+    margin-bottom: 0vh;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenttext {
+    margin-top: -450px; /* Margen izquierdo automático */
+    text-align: center;
+    color: #333; /* Color del texto */
+}
+
+.contenttext0 {
+    margin-top: -90px;
+    text-align: center;
+    color: #333; /* Color del texto */
+}
+
+h1text {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.text-box {
+    max-width: 800vh;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo del área de texto */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.text0 {
+    margin-top: 120px;
+    font-size: 15px;
+    line-height: 1;
+}
+
+.text2 {
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: dodgerblue; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: #2980b9; /* Cambio de color al pasar el ratón sobre el botón */
+    }
+
+button {
+    width: 60%;
+    margin: 20 auto;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }

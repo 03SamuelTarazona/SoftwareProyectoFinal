@@ -150,6 +150,7 @@
     <Content Include="Content\CambiarContraseña.css" />
     <Content Include="Content\DetallesForm.css" />
     <Content Include="Content\Historial.css" />
+    <Content Include="Content\Img\FondoInicio.jpg" />
     <Content Include="Content\Img\Logo_Ing_Software_Sin_Fondo.png" />
     <Content Include="Content\Img\MenuDespliegue.png" />
     <Content Include="Content\Img\Usuario.png" />

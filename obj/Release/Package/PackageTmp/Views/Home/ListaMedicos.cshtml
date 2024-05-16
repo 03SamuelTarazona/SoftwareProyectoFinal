@@ -1,0 +1,139 @@
+﻿﻿@{
+    Layout = null;
+}
+
+@{
+    var medicos = ViewData["medico"] as List<Software_Proyecto.Dto.MedicoDto>;
+}
+
+@{
+    // Recuperar el valor de la variable de sesión
+    Software_Proyecto.Dto.PersonaDto personalogueo = Session["AdminLogged"] as Software_Proyecto.Dto.PersonaDto;
+}
+
+@if (personalogueo == null)
+{
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Redirección automática en ASP.NET</title>
+        <script type="text/javascript">
+            window.onload = function () {
+                setTimeout(function () {
+                    window.location.href = 'Index';
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <h1>Inicie Sesion primero</h1>
+    </body>
+</html>
+}
+else
+{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListaMedicos</title>
+    <link href="~/Content/ListaMedicos.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header class="encabezado">
+
+        <ul>
+            <li>@Html.ActionLink("Pacientes", "ListaPacientes", "Home")</li>
+
+            <li>@Html.ActionLink("Cerrar Sesion", "CerrarSesion", "Home")</li>
+        </ul>
+    </header>
+    <div class="container">
+        <div>
+            @using (Html.BeginForm("EliminarMedico", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+
+                <h2>Lista de Medicos</h2>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Correo</th>
+                            <th>Genero</th>
+                            <th>Especialidad</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var medico in medicos)
+                        {
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="id_persona" id="id_persona" value="@medico.persona.id_persona">
+
+                                </td>
+                                <td>@medico.persona.nombres</td>
+                                <td>@medico.persona.apellidos</td>
+                                <td>@medico.persona.correo</td>
+                                <td>@medico.persona.genero</td>
+                                <td>@medico.especialidad</td>
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+
+                <button type="submit">Eliminar</button>
+
+            }  @if (ViewData["Mensaje"] != null)
+            {
+                <p>@ViewData["Mensaje"]</p>
+            }
+
+
+        </div>
+
+        <div>
+
+
+            <button onclick="crear()">Agregar</button>
+
+        </div>
+        <div>
+
+            @using (Html.BeginForm("DescargarPdfMedicos", "Home", FormMethod.Post))
+            {
+                <button type="submit">
+                    Descargar PDF de Medicos
+                </button>
+            }    @if (ViewData["Mensaje"] != null)
+            {
+                <p>@ViewData["Mensaje"]</p>
+            }
+        </div>
+
+
+
+
+
+
+    </div>
+    <script>
+    function crear() {
+        window.location.href = '@Url.Action("AgregarMedico", "Home")';
+    }
+    </script>
+
+
+
+</body>
+</html>
+}

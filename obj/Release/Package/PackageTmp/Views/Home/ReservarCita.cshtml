@@ -1,0 +1,92 @@
+﻿﻿@{
+    Layout = null;
+}
+
+@{
+    var user = Session["UserLogged"] as Software_Proyecto.Dto.PersonaDto;
+}
+@{
+    // Recuperar el valor de la variable de sesión
+    Software_Proyecto.Dto.PersonaDto usuario = Session["UserLogged"] as Software_Proyecto.Dto.PersonaDto;
+}
+
+@if (usuario == null)
+{
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Redirección automática en ASP.NET</title>
+        <script type="text/javascript">
+            window.onload = function () {
+                setTimeout(function () {
+                    window.location.href = 'Index';
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <h1>Inicie Sesion primero</h1>
+    </body>
+</html>
+}
+else
+{
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Agenda</title>
+    <link href="~/Content/ReservarCita.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            @using (Html.BeginForm("ReservarCita", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+
+                <h2>Agendamiento de Cita</h2>
+
+                <div>
+                    <label>Correo</label>
+                    <input type="email" id="correo" name="correo" value="@user.correo" readonly  required>
+                </div>
+
+                <div>
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <div>
+                    <label for="hora_inicio">Hora de Inicio</label>
+                    <input type="time" id="hora_inicio" name="hora_inicio" required>
+                </div>
+
+                <div>
+                    <input type="text" id="estado" name="estado" value="Reservado" hidden>
+                </div>
+
+                <div class="containerbutton">
+                    <button type="submit">Agendar</button>
+                </div>
+            }
+            @if (ViewData["Mensaje"] != null)
+            {
+                <p>@ViewData["Mensaje"]</p>
+            }
+
+            <div class="containerbutton">
+                <button onclick="retr()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function retr() {
+            window.location.href = '@Url.Action("VistaPaciente", "Home")';
+        }
+    </script>
+</body>
+</html>
+
+}

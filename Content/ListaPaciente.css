@@ -15,7 +15,7 @@ body {
 .container {
     width: auto;
     height: auto; /* Altura automática */
-    margin: 130px auto;
+    margin:  auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;

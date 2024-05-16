@@ -196,6 +196,62 @@ public class PersonaRepository
         }
         return persona;
     }
-  
+    public PersonaDto TraerDatos(int id_persona)
+    {
+        ConexionBDUtility conexion = new ConexionBDUtility();
+        PersonaDto persona = null;
+        PersonaDto personaResp = new PersonaDto();
+        EncryptUtility encr = new EncryptUtility();
+
+        try
+        {
+            conexion.Connect();
+            string SQL = "SELECT id_persona,nombres,apellidos FROM dbo.Persona WHERE (id_persona = @id_persona)";
+            using (SqlCommand command = new SqlCommand(SQL, conexion.Conexion()))
+            {
+                command.Parameters.AddWithValue("@id_persona", id_persona);
+
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+
+                        persona = new PersonaDto
+                        {
+                            id_persona = Convert.ToInt32(reader["id_persona"]),
+                            nombres = reader["nombres"].ToString(),
+                            apellidos = reader["apellidos"].ToString()
+                        };
+                        conexion.Disconnect();
+                        persona.respuesta = 1;
+                        persona.mensaje = "Inicio correcto";
+                        return persona;
+
+                    }
+                    else
+                    {
+                        personaResp.respuesta = 0;
+                        personaResp.mensaje = "Inicio Incorrecto";
+                        return personaResp;
+                    }
+                }
+            }
+
+        }
+        catch (Exception ex)
+        {
+            persona = new PersonaDto
+            {
+                respuesta = -1,
+                mensaje = "Error al inicio sesión: " + ex.Message
+            };
+        }
+        finally
+        {
+            conexion.Disconnect();
+        }
+        return persona;
+    }
 
 }

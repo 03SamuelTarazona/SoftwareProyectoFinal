@@ -9,45 +9,97 @@
 
 }
 
+@{
+    // Recuperar el valor de la variable de sesión
+    Software_Proyecto.Dto.PersonaDto usuario = Session["UserLogged"] as Software_Proyecto.Dto.PersonaDto;
+}
+
+@if (usuario == null)
+{
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Redirección automática en ASP.NET</title>
+        <script type="text/javascript">
+            window.onload = function () {
+                setTimeout(function () {
+                    window.location.href = 'Index';
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <h1>Inicie Sesion primero</h1>
+    </body>
+</html>
+}
+else
+{
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ListaMedicos</title>
     <link href="~/Content/Historial.css" rel="stylesheet" />
+    <title>ListaMedicos</title>
+
+    <style>
+        button {
+            width: 60%;
+            margin: 20px auto; /* Ajusta el margen según tus necesidades */
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: "Montserrat";
+            font-weight: 500;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+    </style>
 </head>
 <body>
-
     <div class="container">
         <h2>Historial</h2>
         <table>
             <thead>
                 <tr>
-
                     <th>Fecha</th>
                     <th>Hora Inicio</th>
-                    <th>Hora Fin</th>
+                  
+                    <th>Estado</th>
                     <th>Descripcion</th>
                 </tr>
             </thead>
-
             <tbody>
-
                 @foreach (var agenda in agendas)
                 {
                     <tr>
-
                         <td>@agenda.fecha</td>
                         <td>@agenda.hora_inicio</td>
-                        <td>@agenda.hora_fin</td>
+                     
+                        <td>@agenda.estado</td>
                         <td>@agenda.descripcion</td>
                     </tr>
                 }
-
             </tbody>
         </table>
+        <div>
+            <button onclick="retr()">Cancelar</button>
+        </div>
     </div>
 
+    <script>
+        function retr() {
+            window.location.href = '@Url.Action("VistaPaciente", "Home")';
+        }
+    </script>
 </body>
 </html>
+
+}
