@@ -7,58 +7,59 @@ body {
     background-color: dodgerblue;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 90vh;   
+}
+
+html {
+    background-color: dodgerblue;
 }
 
 .container {
-    max-width: 600px;
+    max-width: 31rem;
     margin: 130px auto;
-    padding: 20px;
+    padding: .5rem;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
     font-family: "Montserrat";
     font-weight: 500;
 }
+
+.navbar-brand{
+    display:block;
+}
+
+.container a {
+    text-decoration: none;
+    color: black;
+}
+
+    .container a:hover {
+        color: rgb(2, 176, 232);
+    }
+
 
 h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-}
-
-input[type="email"],
-input[type="date"],
+/* Estilo para los elementos input */
+input[type="hidden"],
 input[type="time"],
-input[type="text"],
-input[type="submit"],
-textarea {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+input[type="text"] {
+    width: calc(100% - 20px);
     padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* incluir el relleno y el borde en el tamaño total */
     font-family: "Montserrat";
     font-weight: 500;
 }
 
 .input-group {
     margin-bottom: 15px;
-}
-
-.containerbutton {
-    margin-top: 15px;
-    text-align: center;
 }
 
 button {

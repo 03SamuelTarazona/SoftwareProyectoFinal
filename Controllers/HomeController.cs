@@ -13,11 +13,11 @@ using System.Web.UI.WebControls;
 
 namespace Software_Proyecto.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult RegistroPaciente()
         {
-            return View();
+            return View("RegistroPaciente");
         }
         public ActionResult BuscarCorreo()
         {
@@ -72,7 +72,7 @@ namespace Software_Proyecto.Controllers
         }
         public ActionResult IniciarSesion()
         {
-            return View();
+            return View("IniciarSesion");
         }
         public ActionResult VistaPaciente()
         {
@@ -82,6 +82,7 @@ namespace Software_Proyecto.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult IniciarSesion(PersonaDto persona, string contrasena)
         {
@@ -100,12 +101,20 @@ namespace Software_Proyecto.Controllers
 
                 }
             }
+            else if (personalogueo.id_rol == 2)
+            {
+                if (personalogueo.respuesta != 0)
+                {
+                    Session["MedicoLogged"] = personalogueo;
+                    return MostrarCitas();
+                }
+            }
             else if (personalogueo.id_rol == 3)
             {
                 if (personalogueo.respuesta != 0)
                 {
-                    Session["UserLogged"] = personalogueo;
-                    return View("ListaMedicos");
+                    Session["AdminLogged"] = personalogueo;
+                    return ListaMedicos();
                 }
             }
             return View();
@@ -238,10 +247,16 @@ namespace Software_Proyecto.Controllers
             ViewData["agenda"] = agenda;
             return View("MostrarCitas");
         }
+
         [HttpPost]
         public ActionResult Detalles(AgendaDto agenda)
         {
             return View("DetallesForm", agenda);
+        }
+
+        public ActionResult Detalles()
+        {
+            return View();
         }
 
         [HttpPost]
@@ -309,6 +324,16 @@ namespace Software_Proyecto.Controllers
             PacienteService pacienteService = new PacienteService();
             pacienteService.Eliminar(id_persona);
             return View("Index");
+        }
+
+        [OutputCache(NoStore = true, Duration = 0, VaryByParam = "*")]
+        public ActionResult CerrarSesion()
+        {
+            Session["UserLogged"] = null;
+            Session.Clear();
+            Session.Abandon();
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }

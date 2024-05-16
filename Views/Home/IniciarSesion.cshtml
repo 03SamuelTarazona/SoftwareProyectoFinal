@@ -1,11 +1,10 @@
-﻿@{
-    ViewBag.Title = "Iniciar Sesion";
+﻿﻿@{
+    Layout = null;
 }
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html>
 <head>
-
     <meta name="viewport" content="width=device-width" />
     <title>IniciarSesion</title>
     <link href="~/Content/InicioSesion.css" rel="stylesheet" />
@@ -13,10 +12,31 @@
 <body>
     <header>
 
-
         @using (Html.BeginForm("IniciarSesion", "Home", FormMethod.Post))
         {
             @Html.AntiForgeryToken()
+
+            <nav>
+                <input type="checkbox" id="check" />
+                <label for="check" class="checkbtn">
+                    <img class="img2" src="~/Content/Img/MenuDespliegue.png" alt="Icono de navegación" />
+                </label>
+                <div class="Text1"><h1>CentroMedico</h1></div>
+                <a href="#" class="enlace">
+
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand"><img class="img0" src="~/Content/Img/Logo_Ing_Software_Sin_Fondo.png" /></a>
+
+                </a>
+                <ul>
+                    <li><a href="#">SOBRE NOSOTROS</a></li>
+                    <li class=""><a href="#">SERVICIOS</a></li>
+                    <li class=""><a href="#">CONTACTO</a></li>
+                    <li class="">
+                        <a asp-area="" asp-controller="Home" asp-action="InicioSesion" class="nav-link"><img class="img1" src="~/Content/Img/Usuario.png" /></a>
+                    </li>
+
+                </ul>
+            </nav>
 
             <div class="container">
                 <h2>Iniciar Sesion</h2>
@@ -38,7 +58,7 @@
                 <button type="submit">Iniciar Sesion</button>
 
                 <div class="links">
-                    <a asp-area="" asp-controller="Home" asp-action="CrearCuenta">Crear Cuenta</a> | <a asp-area="" asp-controller="Home" asp-action="RecuperarCuenta">Recuperar Cuenta</a>
+                    <a href="RegistroPaciente" asp-area="" asp-controller="Home" asp-action="CrearCuenta">Crear Cuenta</a> | <a asp-area="" asp-controller="Home" asp-action="RecuperarCuenta">Recuperar Cuenta</a>
                 </div>
 
             </div>
@@ -47,6 +67,7 @@
         {
             <p>@ViewData["Mensaje"]</p>
         }
+
     </header>
 </body>
 

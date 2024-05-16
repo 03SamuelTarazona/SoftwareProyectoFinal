@@ -1,10 +1,9 @@
-﻿
-@{
-    ViewBag.Title = "Cambiar Contrasena";
+﻿﻿@{
+    Layout = null;
 }
 @{ 
     var correo = ViewData["correo"];
-} 
+}
 
 <!DOCTYPE html>
 <html>
@@ -14,29 +13,54 @@
     <link href="~/Content/CambiarContraseña.css" rel="stylesheet" />
 </head>
 <body>
+    <header>
 
-    @using (Html.BeginForm("CambiarContrasena", "Home", FormMethod.Post))
-    {
-        @Html.AntiForgeryToken()
+        @using (Html.BeginForm("CambiarContrasena", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
 
-    <div class="container">
-        <h2>Cambiar Contraseña</h2>
-        <input type="hidden" name="correo" value=@correo>
+            <nav>
+                <input type="checkbox" id="check" />
+                <label for="check" class="checkbtn">
+                    <img class="img2" src="~/Content/Img/MenuDespliegue.png" alt="Icono de navegación" />
+                </label>
+                <div class="Text1"><h1>CentroMedico</h1></div>
+                <a href="#" class="enlace">
 
-        <div class="inputbox">
-            <input type="text" id="codigo" name="codigo" placeholder="Codigo" required />
-        </div>
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand"><img class="img0" src="~/Content/Img/Logo_Ing_Software_Sin_Fondo.png" /></a>
 
-        <div class="inputbox">
-            <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required />
-        </div>
+                </a>
+                <ul>
+                    <li><a href="#">SOBRE NOSOTROS</a></li>
+                    <li class=""><a href="#">SERVICIOS</a></li>
+                    <li class=""><a href="#">CONTACTO</a></li>
+                    <li class="">
+                        <a asp-area="" asp-controller="Home" asp-action="InicioSesion" class="nav-link"><img class="img1" src="~/Content/Img/Usuario.png" /></a>
+                    </li>
 
-        <button type="submit">Cambiar Contraseña</button>
-    </div>
+                </ul>
+            </nav>
 
-            }  @if (ViewData["Mensaje"] != null)
-            {
-                <p>@ViewData["Mensaje"]</p>
-            }
-    </body>
+            <div class="container">
+                <h2>Cambiar Contraseña</h2>
+                <input type="hidden" name="correo" value=@correo>
+
+                <div class="inputbox">
+                    <input type="text" id="codigo" name="codigo" placeholder="Codigo" required />
+                </div>
+
+                <div class="inputbox">
+                    <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required />
+                </div>
+
+                <button type="submit">Cambiar Contraseña</button>
+            </div>
+
+        }  @if (ViewData["Mensaje"] != null)
+        {
+            <p>@ViewData["Mensaje"]</p>
+        }
+
+    </header>
+</body>
 </html>

@@ -6,6 +6,9 @@ header {
     font-weight: 900;
     font-style: italic;
     color: #fff; /* Color del texto */
+    top: 0; /* Ajusta la posición en la parte superior */
+    width: 100%; /* Ajusta el ancho al 100% del viewport */
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
 }
 
 html {
@@ -14,8 +17,11 @@ html {
 }
 
 body {
+    background: dodgerblue;
+    margin-top: -20px; /* Ajusta el margen superior para compensar el header fijo */
 }
 
+/*MENU*/
 .img0 {
     width: 120px;
     height: 120px;
@@ -29,40 +35,38 @@ body {
 .img2 {
     width: 40px;
     height: 40px;
-    margin-top: 0%;
+    margin-top: 40px;
 }
 
 .Text1 {
-    background-color: red;
     margin-left: 10%;
     position: absolute;
     max-width: 490px;
     height: 100px;
     padding: 20px 0px;
     border-radius: 3px;
-    font-size: 35px;
+    font-size: 45px;
 }
 
 /*variables globales */
-    * {
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    }
+}
 
 /*Menu*/
 nav {
     background: dodgerblue;
-    height: 130px;
+    height: 140px;
     width: 100%;
     border: 1px solid black; /* Solo para visualización */
-
 }
 
 /*Logo*/
-.enlace{
+.enlace {
     position: absolute;
     padding: 40px 50px;
 }
@@ -78,31 +82,26 @@ nav ul {
     margin-right: 20px;
 }
 
-/*Éspacio Items*/
+    /*Éspacio Items*/
     nav ul li {
         display: inline-block;
         line-height: 130px; /*Centrar*/
         margin: 0 15px; /*Espacio entre Items*/
     }
 
-    /*Items*/
-    nav ul li a{
-        color: black; 
-        padding: 20px 13px; 
-        border-radius: 10px;
-        text-transform: uppercase;/*MAYUSCULA*/
-    }
+        /*Items*/
+        nav ul li a {
+            color: black;
+            padding: 27px 20px;
+            border-radius: 10px;
+            text-transform: uppercase; /*MAYUSCULA*/
+        }
 
-    /*Transicion*/
-    li a.active, li a:hover {
+/*Transicion*/
+li a.active, li a:hover {
     background: white;
     transition: .5s;
-    }
-
-    .LiImg1 {
-  
-   
-    }
+}
 
 /*Despliege*/
 .checkbtn {
@@ -114,17 +113,18 @@ nav ul {
     cursor: pointer;
     display: none;
 }
-
+/*Despliege oculto*/
 #check {
     display: none;
 }
 
+
 /*Fondo*/
 section {
-    background: url(fondo.jpg) no-repeat;
+    background-image: url('img/doctors-uniform-realistic-background-vector.jpg');
     background-size: cover;
     background-position: center center;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 155px);
 }
 
 @media (max-width: 952px) {
@@ -138,13 +138,13 @@ section {
 
     /* Centrar el título en pantallas más pequeñas */
     .Text1 {
-        left: calc(50% + 30px); /* Coloca el borde izquierdo del elemento un poco más a la derecha del centro del contenedor padre */
+        left: calc(50% + 180px); /* Coloca el borde izquierdo del elemento un poco más a la derecha del centro del contenedor padre */
         transform: translateX(-50%); /* Mantiene el elemento centrado horizontalmente */
         text-align: center; /* Alinea el texto dentro del contenedor en el centro */
         margin-left: 500px; /* Elimina cualquier margen izquierdo para asegurar que el título esté completamente centrado */
-    
     }
 }
+
 @media (max-width: 858px) {
     .checkbtn {
         display: block;
@@ -154,29 +154,102 @@ section {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #2c3e50;
-        top: 80px;
+        background: #fff;
+        top: 140px;
         left: -100%;
         text-align: center;
         transition: all .5s;
     }
 
-    nav ul li{
-    display: block; 
-    margin: 50px 0; 
-    line-height: 30px;
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
     }
 
-    nav ul li a{
-    font-size:20px;
-    }
-    
-    li a:hover, li a.active{
+        nav ul li a {
+            font-size: 20px;
+        }
+
+    li a:hover, li a.active {
         background: none;
-        color: red;
+        color: dodgerblue;
     }
 
-    #check:checked ~ ul{
-        left:0;
+    #check:checked ~ ul {
+        left: 0;
     }
 }
+/*MENU*/
+
+
+/*Informacion del menu*/
+.containertext {
+    margin-top: 0px;
+    background-image: url('../img/panoramica.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center; /* La imagen de fondo se centrará dentro del contenedor */
+    margin-bottom: 0vh;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenttext {
+    margin-top: -450px; /* Margen izquierdo automático */
+    text-align: center;
+    color: #333; /* Color del texto */
+}
+
+.contenttext0 {
+    margin-top: -90px;
+    text-align: center;
+    color: #333; /* Color del texto */
+}
+
+h1text {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.text-box {
+    max-width: 800vh;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo del área de texto */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.text0 {
+    margin-top: 120px;
+    font-size: 15px;
+    line-height: 1;
+}
+
+.text2 {
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: dodgerblue; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: #2980b9; /* Cambio de color al pasar el ratón sobre el botón */
+    }

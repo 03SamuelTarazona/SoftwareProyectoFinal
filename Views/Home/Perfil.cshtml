@@ -12,29 +12,31 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Perfil</title>
+    <link href="~/Content/Perfil.css" rel="stylesheet" />
 </head>
 <body>
 
-    <div>
-        <p>@user.nombres</p>
-        <p>@user.apellidos</p>
-        <p>@user.correo</p>
-        <p>@user.fecha_nacimiento</p>
-        <p>@user.documento</p>
-        <p>@user.genero</p>
+    <div class="container">
+        <h2>Perfil</h2>
+        <div>
+            <p>@user.nombres</p>
+            <p>@user.apellidos</p>
+            <p>@user.correo</p>
+            <p>@user.fecha_nacimiento</p>
+            <p>@user.documento</p>
+            <p>@user.genero</p>
+        </div>
 
+        @using (Html.BeginForm("EliminarPaciente", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <input type="number" id="id_persona" name="id_persona" value="@user.id_persona" hidden>
+            <button type="submit">Borrar Perfil</button>
+        }  @if (ViewData["Mensaje"] != null)
+        {
+            <p>@ViewData["Mensaje"]</p>
+        }
     </div>
-
-    @using (Html.BeginForm("EliminarPaciente", "Home", FormMethod.Post))
-    {
-        @Html.AntiForgeryToken()
-
-        <input type="number" id="id_persona" name="id_persona" value="@user.id_persona" hidden>
-        <button type="submit">Borrar Perfil</button>
-    }  @if (ViewData["Mensaje"] != null)
-    {
-        <p>@ViewData["Mensaje"]</p>
-    }
-
 </body>
 </html>

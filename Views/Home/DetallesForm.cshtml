@@ -1,30 +1,58 @@
-﻿@{
-    ViewBag.Title = "DetallesForm";
+﻿﻿@{
+    Layout = null;
 }
 
+@{
+    // Recuperar el valor de la variable de sesión
+    Software_Proyecto.Dto.PersonaDto usuario = Session["MedicoLogged"] as Software_Proyecto.Dto.PersonaDto;
+}
+
+@if (usuario == null)
+{
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Redirección automática en ASP.NET</title>
+        <script type="text/javascript">
+            window.onload = function () {
+                setTimeout(function () {
+                    window.location.href = 'Index';
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <h1>Inicie Sesion primero</h1>
+    </body>
+</html>
+}
+else
+{
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DetallesForm</title>
+    <link href="~/Content/DetallesForm.css" rel="stylesheet" />
 </head>
 <body>
 
     @using (Html.BeginForm("DetallesForm", "Home", FormMethod.Post))
     {
-       @Html.AntiForgeryToken()
+        @Html.AntiForgeryToken()
 
-        <input type="hidden" id="id_agenda" name="id_agenda" value="@Model.id_agenda" required>
-        <input type="hidden" id="fecha" name="fecha" value="@Model.fecha" required>
-        <input type="hidden" id="id_persona" name="id_persona" value="@Model.id_persona" required>
-        <input type="hidden" id="hora_inicio" name="hora_inicio" value="@Model.hora_inicio" required>
-        <label for="hora_fin">Hora Fin:</label>
-        <input type="time" id="hora_fin" name="hora_fin" value=" " required>
-        <label for="descripcion">Descripcion:</label>
-        <input type="text" id="descripcion" name="descripcion" value=" " required>
+        <div class="container">
+            <h2>Detalles</h2>
+            <input type="hidden" id="id_agenda" name="id_agenda" value="@Model.id_agenda" required>
+            <input type="hidden" id="fecha" name="fecha" value="@Model.fecha" required>
+            <input type="hidden" id="id_persona" name="id_persona" value="@Model.id_persona" required>
+            <input type="hidden" id="hora_inicio" name="hora_inicio" value="@Model.hora_inicio" required>
+            <label for="hora_fin">Hora Fin:</label>
+            <input type="time" id="hora_fin" name="hora_fin" value=" " required>
+            <label for="descripcion">Descripcion:</label>
+            <input type="text" id="descripcion" name="descripcion" value=" " required>
 
-        <div class="form-row">
             <button type="submit" class="boton-crear" onclick="return crearCuenta()">Actualizar</button>
         </div>
 
@@ -32,7 +60,8 @@
     {
         <p>@ViewData["Mensaje"]</p>
     }
-    }
+
 
 </body>
 </html>
+}

@@ -64,7 +64,7 @@ public class CorreoUtility
         PersonaDto persona = new PersonaDto();
 
         String mensajeCorreo = mensajeConN(nombre);
-        EnviarCorreo(destinatario, "Cambiar Contraseña", mensajeCorreo, true);
+        EnviarCorreo(destinatario, "Cita reservada", mensajeCorreo, true);
         return nombre;
 
     }

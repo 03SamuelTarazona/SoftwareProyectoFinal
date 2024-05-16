@@ -1,15 +1,13 @@
-﻿
-@{
-    ViewBag.Title = "BuscarCorreo";
+﻿﻿@{
+    Layout = null;
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>BuscarCorreo</title>
-    <link href="~/Content/BuscarContraseña.css" rel="stylesheet" />
+    <link href="~/Content/BuscarCorreo.css" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -17,13 +15,35 @@
         {
             @Html.AntiForgeryToken()
 
-            <div class="container"> 
-                    <h2>Buscar Correo</h2>
-                    <div class="inputbox">
-                            <label for="correo"></label>
-                            <input type="email" id="correo" name="correo" placeholder="Correo" required>
-                    </div>
-                            <button type="submit">Enviar Correo</button>
+            <nav>
+                <input type="checkbox" id="check" />
+                <label for="check" class="checkbtn">
+                    <img class="img2" src="~/Content/Img/MenuDespliegue.png" alt="Icono de navegación" />
+                </label>
+                <div class="Text1"><h1>CentroMedico</h1></div>
+                <a href="#" class="enlace">
+
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand"><img class="img0" src="~/Content/Img/Logo_Ing_Software_Sin_Fondo.png" /></a>
+
+                </a>
+                <ul>
+                    <li><a href="#">SOBRE NOSOTROS</a></li>
+                    <li class=""><a href="#">SERVICIOS</a></li>
+                    <li class=""><a href="#">CONTACTO</a></li>
+                    <li class="">
+                        <a asp-area="" asp-controller="Home" asp-action="InicioSesion" class="nav-link"><img class="img1" src="~/Content/Img/Usuario.png" /></a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <div class="container">
+                <h2>Buscar Correo</h2>
+                <div class="inputbox">
+                    <label for="correo"></label>
+                    <input type="email" id="correo" name="correo" placeholder="Correo" required>
+                </div>
+                <button type="submit">Enviar Correo</button>
             </div>
 
         }  @if (ViewData["Mensaje"] != null)

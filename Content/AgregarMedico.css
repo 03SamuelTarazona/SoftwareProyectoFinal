@@ -7,12 +7,12 @@ body {
     background-color: dodgerblue;
     justify-content: center;
     align-items: center;
-    height: 165vh;
+    height: 140vh;
 }
 
 .container {
     max-width: 600px;
-    margin: 30px auto;
+    margin: 130px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -50,6 +50,8 @@ textarea {
     box-sizing: border-box; /* incluir el relleno y el borde en el tamaño total */
     font-family: "Montserrat";
     font-weight: 500;
+    margin: 0 auto; /* Centrar horizontalmente */
+    display: block; /* Para que cada elemento esté en una línea nueva */
 }
 
 .input-group {

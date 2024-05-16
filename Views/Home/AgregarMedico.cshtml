@@ -1,6 +1,34 @@
-﻿@{
-    ViewBag.Title = "Agregar Medico";
+﻿﻿@{
+    Layout = null;
 }
+
+
+@{
+    // Recuperar el valor de la variable de sesión
+    Software_Proyecto.Dto.PersonaDto usuario = Session["AdminLogged"] as Software_Proyecto.Dto.PersonaDto;
+}
+
+@if (usuario == null)
+{
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Redirección automática en ASP.NET</title>
+        <script type="text/javascript">
+            window.onload = function () {
+                setTimeout(function () {
+                    window.location.href = 'Index';
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <h1>Inicie Sesion primero</h1>
+    </body>
+</html>
+}
+else
+{
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,65 +43,65 @@
     {
         @Html.AntiForgeryToken()
 
-    <div class="container">
-        <h2>Registro del Médico</h2>
+        <div class="container">
+            <h2>Registro del Médico</h2>
 
-        <div class="form-group">
-            <label for="nombres">Nombres:</label>
-            <input type="text" id="persona.nombres" name="persona.nombres" required>
+            <div class="form-group">
+                <label for="nombres">Nombres:</label>
+                <input type="text" id="persona.nombres" name="persona.nombres" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="persona.apellidos" name="persona.apellidos" required>
+            </div>
+
+            <div class="form-group">
+                <label for="documento">Documento:</label>
+                <input type="text" id="persona.documento" name="persona.documento" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="persona.fecha_nacimiento" name="persona.fecha_nacimiento" required>
+            </div>
+
+            <div class="form-group">
+                <label for="persona.genero">Género:</label>
+
+                <select id="persona.genero" name="persona.genero" required>
+                    <option value="null">Seleccione</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="masculino">Masculino</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input type="email" id="persona.correo" name="persona.correo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="persona.contrasena" name="persona.contrasena" required>
+            </div>
+
+            <div class="form-group">
+                <label for="especialidad">Especialidad:</label>
+                <input type="text" id="especialidad" name="especialidad" required>
+            </div>
+
+            <div class="containerbutton">
+                <button type="submit" onclick="crearCuenta()">Crear</button>
+            </div>
+
         </div>
-
-        <div class="form-group">
-            <label for="apellidos">Apellidos:</label>
-            <input type="text" id="persona.apellidos" name="persona.apellidos" required>
-        </div>
-
-        <div class="form-group">
-            <label for="documento">Documento:</label>
-            <input type="text" id="persona.documento" name="persona.documento" required>
-        </div>
-
-        <div class="form-group">
-            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-            <input type="date" id="persona.fecha_nacimiento" name="persona.fecha_nacimiento" required>
-        </div>
-
-        <div class="form-group">
-            <label for="persona.genero">Género:</label>
-
-            <select id="persona.genero" name="persona.genero" required>
-                <option value="null">Seleccione</option>
-                <option value="femenino">Femenino</option>
-                <option value="masculino">Masculino</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="correo">Correo:</label>
-            <input type="email" id="persona.correo" name="persona.correo" required>
-        </div>
-
-        <div class="form-group">
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="persona.contrasena" name="persona.contrasena" required>
-        </div>
-
-        <div class="form-group">
-            <label for="especialidad">Especialidad:</label>
-            <input type="text" id="especialidad" name="especialidad" required>
-        </div>
-
-        <div class="containerbutton">
-            <button type="submit" onclick="crearCuenta()">Crear</button>
-        </div>
-
-    </div>
 
     }  @if (ViewData["Mensaje"] != null)
     {
         <p>@ViewData["Mensaje"]</p>
     }
- 
+
     <script>
         function crearCuenta() {
             window.alert("Cuenta creada con exito");
@@ -83,3 +111,4 @@
 
 </body>
 </html>
+}

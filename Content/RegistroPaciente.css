@@ -7,12 +7,12 @@ body {
     background-color: dodgerblue;
     justify-content: center;
     align-items: center;
-    height: 180vh;
+    height: 160vh;
 }
 
 .container {
     max-width: 600px;
-    margin: 20px auto;
+    margin: 130px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;

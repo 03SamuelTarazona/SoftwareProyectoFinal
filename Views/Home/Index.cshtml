@@ -1,16 +1,16 @@
-﻿@{
+﻿﻿@{
     Layout = null;
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Inicio</title>
     <link href="~/Content/Index.css" rel="stylesheet" />
 </head>
 <body>
+
     <header>
         <nav>
             <input type="checkbox" id="check" />
@@ -18,25 +18,44 @@
                 <img class="img2" src="~/Content/Img/MenuDespliegue.png" alt="Icono de navegación" />
             </label>
             <div class="Text1"><h1>CentroMedico</h1></div>
-
             <a href="#" class="enlace">
 
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand"><img class="img0" src="~/Content/Img/Logo_Ing_Software_Sin_Fondo.png" /></a>
 
             </a>
-
             <ul>
                 <li><a href="#">SOBRE NOSOTROS</a></li>
                 <li class=""><a href="#">SERVICIOS</a></li>
                 <li class=""><a href="#">CONTACTO</a></li>
                 
+              
                 <li class="">
-                    <a asp-area="" asp-controller="Home" asp-action="InicioSesion" class="nav-link"><img class="img1" src="~/Content/Img/Usuario.png" /></a>
+                    <a href="@Url.Action("IniciarSesion", "Home")">
+                        <img class="img1" src="/Content/Img/Usuario.png" alt="Usuario" />
+                    </a>
+
                 </li>
 
             </ul>
-
         </nav>
+        <section>
+            <div class="containertextGrande">
+                <div class="containertext">
+
+                </div>
+                <div class="contenttext">
+                    <h1text>BIENVENIDO AL CENTRO MEDICO ONLINE</h1text>
+                    <div class="text-box">
+                        <h2>Cuidamos tu salud en tiempos dificiles</h2>
+                    </div>
+                    <p class="text0">Accede a los mejores servicios de la red medica online.</p>
+                    <p class="text2">Estaremos contigo en todo el proceso de agendamiento</p>
+                    <a asp-area="" asp-controller="Home" asp-action="InicioSesion">  <button>AGENDAR CITA</button> </a>
+                </div>
+
+            </div>
+        </section>
     </header>
+
 </body>
 </html>

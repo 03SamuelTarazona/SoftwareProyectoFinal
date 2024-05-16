@@ -1,74 +1,102 @@
-﻿@{  
-   ViewBag.Title = "MostrarCitas";
-}
-@{
-    var agendas= ViewData["agenda"] as List<Software_Proyecto.Dto.AgendaDto>;
+﻿﻿@{
+    Layout = null;
 }
 
+@{
+    // Recuperar el valor de la variable de sesión
+    Software_Proyecto.Dto.PersonaDto personalogueo = Session["MedicoLogged"] as Software_Proyecto.Dto.PersonaDto;
+}
+@{
+    var agendas = ViewData["agenda"] as List<Software_Proyecto.Dto.AgendaDto>;
+}
+@if (personalogueo == null)
+{
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Redirección automática en ASP.NET</title>
+        <script type="text/javascript">
+            window.onload = function () {
+                setTimeout(function () {
+                    window.location.href = 'Index';
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <h1>Inicie Sesion primero</h1>
+    </body>
+</html>
+}
+else
+{
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ListaMedicos</title>
+    <link href="~/Content/MostrarCitas.css" rel="stylesheet" />
 </head>
 <body>
 
+    <header>
+        <ul>
+            <li>@Html.ActionLink("Cerrar Sesion", "CerrarSesion", "Home")</li>
+        </ul>
+    </header>
 
-    <table>
-        <thead>
-            <tr>
-
-                <th>ID  Persona</th>
-                <th>Fecha</th>
-                <th>Hora Inicio</th>
-
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var agenda in agendas)
-            {
+    <div class="container">
+        <h2>Citas Agendadas</h2>
+        <table>
+            <thead>
                 <tr>
-
-                    <td>@agenda.id_persona</td>
-                    <td>@agenda.fecha</td>
-                    <td>@agenda.hora_inicio</td>
-                    <td>
-                        @using (Html.BeginForm("Detalles", "Home", FormMethod.Post))
-                        {
-                            @Html.AntiForgeryToken()
-                            <input type="hidden" name="id_agenda" value=@agenda.id_agenda>
-                            <input type="hidden" name="id_persona" value=@agenda.id_persona>
-                            <input type="hidden" name="fecha" value=@agenda.fecha>
-                            <input type="hidden" name="hora_inicio" value=@agenda.hora_inicio>
-                            <input type="hidden" name="estado" value=@agenda.estado>
-                            <button type="submit" onclick="return " class="boton-icono"><img src="~/Scripts/img/usuario (1).png" class="icono" alt="Detalles"></button>
-
-                        }  @if (ViewData["Mensaje"] != null)
-                        {
-                            <p>@ViewData["Mensaje"]</p>
-                        }
-                    </td>
+                    <th>ID  Persona</th>
+                    <th>Fecha</th>
+                    <th>Hora Inicio</th>
                 </tr>
+            </thead>
+            <tbody>
+                @foreach (var agenda in agendas)
+                {
+                    <tr>
+                        <td>@agenda.id_persona</td>
+                        <td>@agenda.fecha</td>
+                        <td>@agenda.hora_inicio</td>
+                        <td>
+                            @using (Html.BeginForm("Detalles", "Home", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="id_agenda" value=@agenda.id_agenda>
+                                <input type="hidden" name="id_persona" value=@agenda.id_persona>
+                                <input type="hidden" name="fecha" value=@agenda.fecha>
+                                <input type="hidden" name="hora_inicio" value=@agenda.hora_inicio>
+                                <input type="hidden" name="estado" value=@agenda.estado>
+                                <button type="submit" onclick="return " class="boton-icono"><img src="~/Scripts/img/usuario (1).png" class="icono" alt="Detalles"></button>
+
+                            }  @if (ViewData["Mensaje"] != null)
+                            {
+                                <p>@ViewData["Mensaje"]</p>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div>
+            @using (Html.BeginForm("DescargarHistorial", "Home", FormMethod.Post))
+            {
+                <button type="submit">
+                    Descargar PDF
+                </button>
+            }    @if (ViewData["Mensaje"] != null)
+            {
+                <p>@ViewData["Mensaje"]</p>
             }
-        </tbody>
-    </table>
-    <div>
-        @using (Html.BeginForm("DescargarHistorial", "Home", FormMethod.Post))
-        {
-            <button type="submit">
-                Descargar PDF 
-            </button>
-        }    @if (ViewData["Mensaje"] != null)
-        {
-            <p>@ViewData["Mensaje"]</p>
-        }
+        </div>
     </div>
-
-
-
-
-
 
 </body>
 </html>
+}

@@ -1,13 +1,6 @@
 ﻿/*Stylo de Letra*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
 
-header {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-}
-
-
 body {
     margin: 0;
     padding: 0;
@@ -18,8 +11,9 @@ body {
 }
 
 .container {
-    max-width: 500px;
-    margin: 30px auto;
+    width: auto;
+    height: auto; /* Altura automática */
+    margin: 150px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -34,8 +28,8 @@ h2 {
     margin-bottom: 20px;
 }
 
-input[type="email"],
-input[type="submit"] {
+/* Estilo para los elementos input */
+input[type="number"] {
     width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 15px;
@@ -51,7 +45,7 @@ input[type="submit"] {
 
 button {
     width: 60%;
-    margin: 0 auto;
+    margin: 20 auto;
     padding: 10px;
     background-color: #4caf50;
     color: #fff;

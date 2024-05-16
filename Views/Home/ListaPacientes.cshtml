@@ -1,9 +1,35 @@
-﻿@{
-    ViewBag.Title = "ListaPacientes";
+﻿﻿@{
+    Layout = null;
+}
+
+@{var pacientes = ViewData["paciente"] as List<Software_Proyecto.Dto.PacienteDto>;
 }
 @{
-    var pacientes = ViewData["paciente"] as List<Software_Proyecto.Dto.PacienteDto>;
+    // Recuperar el valor de la variable de sesión
+    Software_Proyecto.Dto.PersonaDto medico = Session["AdminLogged"] as Software_Proyecto.Dto.PersonaDto;
 }
+
+@if (medico == null)
+{
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Redirección automática en ASP.NET</title>
+        <script type="text/javascript">
+            window.onload = function () {
+                setTimeout(function () {
+                    window.location.href = 'Index';
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <h1>Inicie Sesion primero</h1>
+    </body>
+</html>
+}
+else
+{
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,14 +37,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ListaMedicos</title>
+    <link href="~/Content/ListaPaciente.css" rel="stylesheet" />
 </head>
 <body>
 
- 
+    <div class="container">
+        <h2>Lista de Pacientes</h2>
         <table>
             <thead>
                 <tr>
-                   
                     <th>Nombres</th>
                     <th>Apellidos</th>
                     <th>Correo</th>
@@ -29,31 +56,29 @@
                 @foreach (var paciente in pacientes)
                 {
                     <tr>
-                        
                         <td>@paciente.persona.nombres</td>
                         <td>@paciente.persona.apellidos</td>
                         <td>@paciente.persona.correo</td>
-                        <td>@paciente.persona.genero</td>                       
+                        <td>@paciente.persona.genero</td>
                     </tr>
                 }
             </tbody>
         </table>
-  
 
-  
-    <div>
-        @using (Html.BeginForm("DescargarPdfPacientes", "Home", FormMethod.Post))
-        {
-            <button type="submit">
-                Descargar PDF de Pacientes
-            </button>
-        }    @if (ViewData["Mensaje"] != null)
-        {
-            <p>@ViewData["Mensaje"]</p>
-        }
+        <div>
+            @using (Html.BeginForm("DescargarPdfPacientes", "Home", FormMethod.Post))
+            {
+                <button type="submit">
+                    Descargar PDF de Pacientes
+                </button>
+            }    @if (ViewData["Mensaje"] != null)
+            {
+                <p>@ViewData["Mensaje"]</p>
+            }
+        </div>
+
     </div>
-
-  
 
 </body>
 </html>
+}
